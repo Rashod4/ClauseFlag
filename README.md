@@ -31,21 +31,3 @@ Processing: Background workers handle text extraction (readability-lxml), senten
 
 Delivery: Results are cached in Redis, persisted to PostgreSQL, and rendered interactively on the frontend.
 
-## Quick Start
-Prerequisites: Docker and Docker Compose.
-
-Bash
-git clone https://github.com/yourusername/clauseflag.git
-cd clauseflag
-
-## Spin up the API, Database, Redis, and Worker
-docker-compose up --build
-
-## Run the frontend
-cd frontend && npm install && npm start
-📈 Roadmap
-[x] MVP: Paste-text classification with DistilBERT.
-
-[ ] Phase 2: URL scraping and async processing queue.
-
-[ ] Phase 3: Anomaly detection via embedding distance.
