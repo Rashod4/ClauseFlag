@@ -1,7 +1,9 @@
+import {GoogleGenerativeAI} from '@google/generative-ai';
+
 export interface Clause {
   id: string;
   text: string;
-  risk: "safe" | "watch" | "danger";
+  risk: 'safe' | 'watch' | 'danger';
   confidence: number;
   anomaly_score: number;
   category: string;
@@ -9,6 +11,50 @@ export interface Clause {
 }
 
 export interface AnalysisResponse {
+  id: string;
+  status: 'complete';
+  clause_count: number;
+  risk_summary: {
+    safe: number;
+    watch: number;
+    danger: number;
+  };
+  clauses: Clause[];
+}
+
+const apiKey = process.env.GEMINI_API_KEY as string | undefined;
+
+if (!apiKey) {
+  // Surface clearly during development if the key is missing.
+  // eslint-disable-next-line no-console
+  console.error('GEMINI_API_KEY is not set. Add it to .env.local.');
+}
+
+const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
+
+function buildPrompt(rawText: string): string {
+  return `
+You are a legal and privacy policy clause risk analyzer.
+
+Given the following policy or terms-of-service text, identify the most important clauses and
+classify each as one of: "safe", "watch", or "danger". Focus on things like dispute resolution,
+data collection/processing, termination, unilateral changes, IP, and other rights or limitations.
+
+Return ONLY valid JSON matching this exact TypeScript type (no extra keys, no comments, no prose):
+
+type Risk = "safe" | "watch" | "danger";
+
+interface Clause {
+  id: string;
+  text: string;
+  risk: Risk;
+  confidence: number;        // 0–1
+  anomaly_score: number;     // 0–1, how unusual or unexpected the clause is
+  category: string;          // short label like "Data Collection", "Termination"
+  explanation: string;       // 1–2 sentence plain-language explanation
+}
+
+interface AnalysisResponse {
   id: string;
   status: "complete";
   clause_count: number;
@@ -20,72 +66,68 @@ export interface AnalysisResponse {
   clauses: Clause[];
 }
 
-const MOCK_RESPONSE: AnalysisResponse = {
-  id: "analysis-mock-001",
-  status: "complete",
-  clause_count: 5,
-  risk_summary: {
-    safe: 2,
-    watch: 2,
-    danger: 1,
-  },
-  clauses: [
-    {
-      id: "clause-1",
-      text: "By using our services, you agree to binding arbitration and waive your right to a jury trial or class action.",
-      risk: "danger",
-      confidence: 0.94,
-      anomaly_score: 0.87,
-      category: "Dispute Resolution",
-      explanation: "Mandatory arbitration with class action waiver is a high-risk clause.",
-    },
-    {
-      id: "clause-2",
-      text: "We may collect and process your personal data in accordance with our Privacy Policy.",
-      risk: "watch",
-      confidence: 0.82,
-      anomaly_score: 0.45,
-      category: "Data Collection",
-      explanation: "Broad data collection language; review linked Privacy Policy.",
-    },
-    {
-      id: "clause-3",
-      text: "You may terminate your account at any time by contacting support.",
-      risk: "safe",
-      confidence: 0.91,
-      anomaly_score: 0.12,
-      category: "Termination",
-      explanation: "Standard user-initiated termination right.",
-    },
-    {
-      id: "clause-4",
-      text: "We reserve the right to modify these terms at any time; continued use constitutes acceptance.",
-      risk: "watch",
-      confidence: 0.78,
-      anomaly_score: 0.52,
-      category: "Amendment",
-      explanation: "Unilateral change with implied consent may limit your recourse.",
-    },
-    {
-      id: "clause-5",
-      text: "Your feedback and suggestions may be used by us without compensation or attribution.",
-      risk: "safe",
-      confidence: 0.85,
-      anomaly_score: 0.21,
-      category: "IP / Feedback",
-      explanation: "Common feedback license; low user impact.",
-    },
-  ],
-};
+Now analyze this text:
+---
+${rawText}
+---
 
-/**
- * Simulates analyzing raw Terms of Service text.
- * No real backend — returns hardcoded mock data after a 2-second delay.
- */
-export function analyzeText(_rawText: string): Promise<AnalysisResponse> {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(MOCK_RESPONSE);
-    }, 2000);
+Remember: respond with JSON ONLY that matches AnalysisResponse exactly.`;
+}
+
+function extractJson(text: string): string {
+  const trimmed = text.trim();
+
+  // Prefer content inside fenced code blocks, especially ```json.
+  const fenceMatch = trimmed.match(/```(?:json)?\s*([\s\S]*?)```/i);
+  if (fenceMatch && fenceMatch[1]) {
+    return fenceMatch[1].trim();
+  }
+
+  // Fallback: try to pull out the first JSON object, even if mixed with prose.
+  const objectMatch = trimmed.match(/\{[\s\S]*\}/);
+  if (objectMatch && objectMatch[0]) {
+    return objectMatch[0];
+  }
+
+  // Last resort: assume the whole thing is JSON (may still fail to parse).
+  return trimmed;
+}
+
+export async function analyzeText(rawText: string): Promise<AnalysisResponse> {
+  if (!genAI) {
+    throw new Error('GEMINI_API_KEY is not configured.');
+  }
+
+  const model = genAI.getGenerativeModel({
+    // Use a broadly available text model for this deprecated SDK.
+    model: 'gemini-2.5-flash',
   });
+
+//   client = genai.Client(http_options={'api_version': 'v1alpha'})
+
+//   response = client.models.generate_content(
+//       model='gemini-2.5-flash',
+//       contents="Explain how AI works",
+//   )
+
+
+  const prompt = buildPrompt(rawText);
+  const result = await model.generateContent(prompt);
+  const raw = result.response.text();
+  const json = extractJson(raw);
+
+  let parsed: AnalysisResponse;
+  try {
+    parsed = JSON.parse(json) as AnalysisResponse;
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.error('Failed to parse Gemini JSON response:', {raw, json, err});
+    throw new Error('Gemini returned an unparseable response. Try again or simplify the input.');
+  }
+
+  if (!parsed || parsed.status !== 'complete' || !Array.isArray(parsed.clauses)) {
+    throw new Error('Unexpected response shape from Gemini.');
+  }
+
+  return parsed;
 }
