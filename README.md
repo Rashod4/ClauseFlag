@@ -1,33 +1,20 @@
-# ClauseFlag
-An end-to-end ML platform that unmasks predatory fine print in Terms of Service. Using a fine-tuned NLP pipeline, ClauseFlag automatically extracts, analyzes, and classifies legal jargon into clear risk levels (Safe, Watch, Danger).
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-## The Problem
-Users rarely read Terms of Service agreements, often unknowingly consenting to invasive data practices or mandatory arbitration. ClauseFlag acts as a protective layer, automating the review process and highlighting anomalous clauses compared to industry baselines.
+# Run and deploy your AI Studio app
 
-## Tech Stack
-Frontend: React, TypeScript, Tailwind CSS
+This contains everything you need to run your app locally.
 
-Backend: Python (FastAPI), PostgreSQL, Redis (Task Queue)
+View your app in AI Studio: https://ai.studio/apps/de653580-6a41-41bf-b602-e791afb1b75a
 
-ML/NLP: Hugging Face (DistilBERT), PyTorch, Scikit-learn
+## Run Locally
 
-DevOps: Docker Compose, GitHub Actions, Structlog
+**Prerequisites:**  Node.js
 
-## Machine Learning Approach
-ClauseFlag is built with production ML patterns, moving beyond a simple API wrapper:
 
-Data Strategy: Trained on a hybrid corpus combining the OPP-115 privacy policy dataset and community-rated labels from ToS;DR.
-
-Sequence Classification: Fine-tuned DistilBERT model identifies clause boundaries and predicts risk categories.
-
-Anomaly Detection: Generates document embeddings and scores new clauses using cosine distance from the corpus centroid to flag highly unusual legal traps.
-
-## System Architecture
-Ingestion: User submits raw text or a URL via the UI.
-
-Queueing: FastAPI pushes the job to a Redis task queue to prevent blocking.
-
-Processing: Background workers handle text extraction (readability-lxml), sentence segmentation, and model inference.
-
-Delivery: Results are cached in Redis, persisted to PostgreSQL, and rendered interactively on the frontend.
-
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

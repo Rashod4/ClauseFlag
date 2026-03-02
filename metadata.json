@@ -1,0 +1,5 @@
+{
+  "name": "ClauseFlag MVP",
+  "description": "Privacy policy analyzer that flags clauses as safe, watch, or danger.",
+  "requestFramePermissions": []
+}
