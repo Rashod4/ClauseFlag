@@ -1,0 +1,3782 @@
+[
+  {
+    "text": "We collect your email address when you create an account to provide you with our services.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard collection of necessary contact information for account creation.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You can delete your account and all associated data at any time through your account settings.",
+    "risk": "safe",
+    "category": "Data Rights",
+    "explanation": "Gives the user full control to delete their data.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We use industry-standard encryption to protect your personal information during transmission.",
+    "risk": "safe",
+    "category": "Security",
+    "explanation": "Standard security practice to protect user data.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We do not sell your personal information to third parties.",
+    "risk": "safe",
+    "category": "Data Sharing",
+    "explanation": "Explicitly protects user data from being sold.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You retain all ownership rights to the content you upload to our platform.",
+    "risk": "safe",
+    "category": "IP Rights",
+    "explanation": "Ensures the user keeps ownership of their own content.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We will notify you at least 30 days in advance of any material changes to these terms.",
+    "risk": "safe",
+    "category": "Updates",
+    "explanation": "Provides reasonable notice before changing the rules.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You may opt out of receiving promotional emails by clicking the unsubscribe link in any email.",
+    "risk": "safe",
+    "category": "Communication",
+    "explanation": "Standard opt-out mechanism for marketing.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "This agreement is governed by the laws of the State of California.",
+    "risk": "safe",
+    "category": "Dispute Resolution",
+    "explanation": "Standard choice of law provision.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We log your IP address to prevent fraud and abuse on our platform.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard security practice with a clear, legitimate purpose.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "If you are under 13, you may not use our services.",
+    "risk": "safe",
+    "category": "Age Restrictions",
+    "explanation": "Standard compliance with COPPA.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may suspend your account if you violate these Terms of Service.",
+    "risk": "safe",
+    "category": "Termination",
+    "explanation": "Standard enforcement of terms.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "You are responsible for keeping your password secure.",
+    "risk": "safe",
+    "category": "User Responsibilities",
+    "explanation": "Standard user security responsibility.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may share your anonymized usage data with our analytics partners.",
+    "risk": "watch",
+    "category": "Data Sharing",
+    "explanation": "Data is anonymized, but still shared with third parties for analytics.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We use cookies and similar technologies to track your activity on our website.",
+    "risk": "watch",
+    "category": "Tracking",
+    "explanation": "Standard tracking, but merits awareness of how activity is monitored.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "Our service may contain links to third-party websites not controlled by us.",
+    "risk": "watch",
+    "category": "Third Parties",
+    "explanation": "Standard disclaimer, reminding you that other sites have their own rules.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may contact you with promotional offers from our affiliates.",
+    "risk": "watch",
+    "category": "Communication",
+    "explanation": "Allows affiliate marketing, which may result in more emails.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We retain your data for as long as your account is active or as needed to provide you services.",
+    "risk": "watch",
+    "category": "Data Retention",
+    "explanation": "Data is kept indefinitely while the account is open.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You grant us a license to use your uploaded content to operate and improve our services.",
+    "risk": "watch",
+    "category": "IP Rights",
+    "explanation": "Standard operating license, but gives the platform broad rights to use your content.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may collect information about your device, including hardware model and OS.",
+    "risk": "watch",
+    "category": "Data Collection",
+    "explanation": "Collects detailed device profiling data.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "Our services are provided 'as is' without any warranties.",
+    "risk": "watch",
+    "category": "Liability",
+    "explanation": "Standard disclaimer limiting their legal liability for issues.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may process your data on servers located outside your home country.",
+    "risk": "watch",
+    "category": "Data Transfer",
+    "explanation": "Data may be subject to different privacy laws internationally.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We may update these terms occasionally, and your continued use implies consent.",
+    "risk": "watch",
+    "category": "Updates",
+    "explanation": "Silent updates without active confirmation.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "If our company is acquired, your data will be transferred to the new owners.",
+    "risk": "watch",
+    "category": "Business Transfer",
+    "explanation": "Your data changes hands if the company is sold.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may use your personal information to personalize the advertising you see.",
+    "risk": "watch",
+    "category": "Targeted Ads",
+    "explanation": "Uses your data for targeted advertising profiles.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may sell your personal data to third-party marketing partners.",
+    "risk": "danger",
+    "category": "Data Selling",
+    "explanation": "Explicitly monetizes your personal data by selling it to third parties.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You waive your right to participate in a class action lawsuit against us.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Severely limits your legal recourse by preventing collective action.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "All disputes must be resolved through binding arbitration.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Forces you out of public courts into private arbitration.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We reserve the right to change these terms at any time without prior notice.",
+    "risk": "danger",
+    "category": "Updates",
+    "explanation": "Allows them to change the rules at any time without telling you.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and distribute your content.",
+    "risk": "danger",
+    "category": "IP Rights",
+    "explanation": "You permanently give up essentially all rights to your intellectual property.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may terminate your account at any time, for any reason, without notice or liability.",
+    "risk": "danger",
+    "category": "Termination",
+    "explanation": "Extremely broad termination rights with no protection for the user.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We collect your precise geolocation data continuously in the background.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Highly invasive tracking of your physical location at all times.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We are not liable for any damages, even if we were negligent or aware of the possibility.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Attempts to completely absolve the company of all responsibility, even for negligence.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may read your private messages to improve our advertising algorithms.",
+    "risk": "danger",
+    "category": "Privacy Violation",
+    "explanation": "Severe violation of communication privacy for commercial gain.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "You agree to indemnify and hold us harmless from any claims arising from your use of the service.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Shifts all legal and financial burden onto the user, even for the platform's failures.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We retain the right to collect data from your microphone at any time.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Extremely invasive surveillance of your offline environment.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "By using our service, you consent to us sharing your complete browsing history with our affiliates.",
+    "risk": "danger",
+    "category": "Data Sharing",
+    "explanation": "Massive overcollection and sharing of sensitive web activity.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We collect your email address when you create an account to provide you with our services.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard collection of necessary contact information for account creation.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You can delete your account and all associated data at any time through your account settings.",
+    "risk": "safe",
+    "category": "Data Rights",
+    "explanation": "Gives the user full control to delete their data.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We use industry-standard encryption to protect your personal information during transmission.",
+    "risk": "safe",
+    "category": "Security",
+    "explanation": "Standard security practice to protect user data.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We do not sell your personal information to third parties.",
+    "risk": "safe",
+    "category": "Data Sharing",
+    "explanation": "Explicitly protects user data from being sold.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You retain all ownership rights to the content you upload to our platform.",
+    "risk": "safe",
+    "category": "IP Rights",
+    "explanation": "Ensures the user keeps ownership of their own content.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We will notify you at least 30 days in advance of any material changes to these terms.",
+    "risk": "safe",
+    "category": "Updates",
+    "explanation": "Provides reasonable notice before changing the rules.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "You may opt out of receiving promotional emails by clicking the unsubscribe link in any email.",
+    "risk": "safe",
+    "category": "Communication",
+    "explanation": "Standard opt-out mechanism for marketing.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "This agreement is governed by the laws of the State of California.",
+    "risk": "safe",
+    "category": "Dispute Resolution",
+    "explanation": "Standard choice of law provision.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We log your IP address to prevent fraud and abuse on our platform.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard security practice with a clear, legitimate purpose.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "If you are under 13, you may not use our services.",
+    "risk": "safe",
+    "category": "Age Restrictions",
+    "explanation": "Standard compliance with COPPA.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may suspend your account if you violate these Terms of Service.",
+    "risk": "safe",
+    "category": "Termination",
+    "explanation": "Standard enforcement of terms.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You are responsible for keeping your password secure.",
+    "risk": "safe",
+    "category": "User Responsibilities",
+    "explanation": "Standard user security responsibility.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may share your anonymized usage data with our analytics partners.",
+    "risk": "watch",
+    "category": "Data Sharing",
+    "explanation": "Data is anonymized, but still shared with third parties for analytics.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We use cookies and similar technologies to track your activity on our website.",
+    "risk": "watch",
+    "category": "Tracking",
+    "explanation": "Standard tracking, but merits awareness of how activity is monitored.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "Our service may contain links to third-party websites not controlled by us.",
+    "risk": "watch",
+    "category": "Third Parties",
+    "explanation": "Standard disclaimer, reminding you that other sites have their own rules.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We may contact you with promotional offers from our affiliates.",
+    "risk": "watch",
+    "category": "Communication",
+    "explanation": "Allows affiliate marketing, which may result in more emails.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We retain your data for as long as your account is active or as needed to provide you services.",
+    "risk": "watch",
+    "category": "Data Retention",
+    "explanation": "Data is kept indefinitely while the account is open.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You grant us a license to use your uploaded content to operate and improve our services.",
+    "risk": "watch",
+    "category": "IP Rights",
+    "explanation": "Standard operating license, but gives the platform broad rights to use your content.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may collect information about your device, including hardware model and OS.",
+    "risk": "watch",
+    "category": "Data Collection",
+    "explanation": "Collects detailed device profiling data.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "Our services are provided 'as is' without any warranties.",
+    "risk": "watch",
+    "category": "Liability",
+    "explanation": "Standard disclaimer limiting their legal liability for issues.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We may process your data on servers located outside your home country.",
+    "risk": "watch",
+    "category": "Data Transfer",
+    "explanation": "Data may be subject to different privacy laws internationally.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may update these terms occasionally, and your continued use implies consent.",
+    "risk": "watch",
+    "category": "Updates",
+    "explanation": "Silent updates without active confirmation.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "If our company is acquired, your data will be transferred to the new owners.",
+    "risk": "watch",
+    "category": "Business Transfer",
+    "explanation": "Your data changes hands if the company is sold.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may use your personal information to personalize the advertising you see.",
+    "risk": "watch",
+    "category": "Targeted Ads",
+    "explanation": "Uses your data for targeted advertising profiles.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may sell your personal data to third-party marketing partners.",
+    "risk": "danger",
+    "category": "Data Selling",
+    "explanation": "Explicitly monetizes your personal data by selling it to third parties.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You waive your right to participate in a class action lawsuit against us.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Severely limits your legal recourse by preventing collective action.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "All disputes must be resolved through binding arbitration.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Forces you out of public courts into private arbitration.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We reserve the right to change these terms at any time without prior notice.",
+    "risk": "danger",
+    "category": "Updates",
+    "explanation": "Allows them to change the rules at any time without telling you.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "You grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and distribute your content.",
+    "risk": "danger",
+    "category": "IP Rights",
+    "explanation": "You permanently give up essentially all rights to your intellectual property.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may terminate your account at any time, for any reason, without notice or liability.",
+    "risk": "danger",
+    "category": "Termination",
+    "explanation": "Extremely broad termination rights with no protection for the user.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We collect your precise geolocation data continuously in the background.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Highly invasive tracking of your physical location at all times.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We are not liable for any damages, even if we were negligent or aware of the possibility.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Attempts to completely absolve the company of all responsibility, even for negligence.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We may read your private messages to improve our advertising algorithms.",
+    "risk": "danger",
+    "category": "Privacy Violation",
+    "explanation": "Severe violation of communication privacy for commercial gain.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You agree to indemnify and hold us harmless from any claims arising from your use of the service.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Shifts all legal and financial burden onto the user, even for the platform's failures.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We retain the right to collect data from your microphone at any time.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Extremely invasive surveillance of your offline environment.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "By using our service, you consent to us sharing your complete browsing history with our affiliates.",
+    "risk": "danger",
+    "category": "Data Sharing",
+    "explanation": "Massive overcollection and sharing of sensitive web activity.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We collect your email address when you create an account to provide you with our services.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard collection of necessary contact information for account creation.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "You can delete your account and all associated data at any time through your account settings.",
+    "risk": "safe",
+    "category": "Data Rights",
+    "explanation": "Gives the user full control to delete their data.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We use industry-standard encryption to protect your personal information during transmission.",
+    "risk": "safe",
+    "category": "Security",
+    "explanation": "Standard security practice to protect user data.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We do not sell your personal information to third parties.",
+    "risk": "safe",
+    "category": "Data Sharing",
+    "explanation": "Explicitly protects user data from being sold.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You retain all ownership rights to the content you upload to our platform.",
+    "risk": "safe",
+    "category": "IP Rights",
+    "explanation": "Ensures the user keeps ownership of their own content.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We will notify you at least 30 days in advance of any material changes to these terms.",
+    "risk": "safe",
+    "category": "Updates",
+    "explanation": "Provides reasonable notice before changing the rules.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You may opt out of receiving promotional emails by clicking the unsubscribe link in any email.",
+    "risk": "safe",
+    "category": "Communication",
+    "explanation": "Standard opt-out mechanism for marketing.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "This agreement is governed by the laws of the State of California.",
+    "risk": "safe",
+    "category": "Dispute Resolution",
+    "explanation": "Standard choice of law provision.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We log your IP address to prevent fraud and abuse on our platform.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard security practice with a clear, legitimate purpose.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "If you are under 13, you may not use our services.",
+    "risk": "safe",
+    "category": "Age Restrictions",
+    "explanation": "Standard compliance with COPPA.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may suspend your account if you violate these Terms of Service.",
+    "risk": "safe",
+    "category": "Termination",
+    "explanation": "Standard enforcement of terms.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You are responsible for keeping your password secure.",
+    "risk": "safe",
+    "category": "User Responsibilities",
+    "explanation": "Standard user security responsibility.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may share your anonymized usage data with our analytics partners.",
+    "risk": "watch",
+    "category": "Data Sharing",
+    "explanation": "Data is anonymized, but still shared with third parties for analytics.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We use cookies and similar technologies to track your activity on our website.",
+    "risk": "watch",
+    "category": "Tracking",
+    "explanation": "Standard tracking, but merits awareness of how activity is monitored.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "Our service may contain links to third-party websites not controlled by us.",
+    "risk": "watch",
+    "category": "Third Parties",
+    "explanation": "Standard disclaimer, reminding you that other sites have their own rules.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may contact you with promotional offers from our affiliates.",
+    "risk": "watch",
+    "category": "Communication",
+    "explanation": "Allows affiliate marketing, which may result in more emails.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We retain your data for as long as your account is active or as needed to provide you services.",
+    "risk": "watch",
+    "category": "Data Retention",
+    "explanation": "Data is kept indefinitely while the account is open.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You grant us a license to use your uploaded content to operate and improve our services.",
+    "risk": "watch",
+    "category": "IP Rights",
+    "explanation": "Standard operating license, but gives the platform broad rights to use your content.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may collect information about your device, including hardware model and OS.",
+    "risk": "watch",
+    "category": "Data Collection",
+    "explanation": "Collects detailed device profiling data.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "Our services are provided 'as is' without any warranties.",
+    "risk": "watch",
+    "category": "Liability",
+    "explanation": "Standard disclaimer limiting their legal liability for issues.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may process your data on servers located outside your home country.",
+    "risk": "watch",
+    "category": "Data Transfer",
+    "explanation": "Data may be subject to different privacy laws internationally.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may update these terms occasionally, and your continued use implies consent.",
+    "risk": "watch",
+    "category": "Updates",
+    "explanation": "Silent updates without active confirmation.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "If our company is acquired, your data will be transferred to the new owners.",
+    "risk": "watch",
+    "category": "Business Transfer",
+    "explanation": "Your data changes hands if the company is sold.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may use your personal information to personalize the advertising you see.",
+    "risk": "watch",
+    "category": "Targeted Ads",
+    "explanation": "Uses your data for targeted advertising profiles.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may sell your personal data to third-party marketing partners.",
+    "risk": "danger",
+    "category": "Data Selling",
+    "explanation": "Explicitly monetizes your personal data by selling it to third parties.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You waive your right to participate in a class action lawsuit against us.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Severely limits your legal recourse by preventing collective action.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "All disputes must be resolved through binding arbitration.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Forces you out of public courts into private arbitration.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We reserve the right to change these terms at any time without prior notice.",
+    "risk": "danger",
+    "category": "Updates",
+    "explanation": "Allows them to change the rules at any time without telling you.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and distribute your content.",
+    "risk": "danger",
+    "category": "IP Rights",
+    "explanation": "You permanently give up essentially all rights to your intellectual property.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may terminate your account at any time, for any reason, without notice or liability.",
+    "risk": "danger",
+    "category": "Termination",
+    "explanation": "Extremely broad termination rights with no protection for the user.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We collect your precise geolocation data continuously in the background.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Highly invasive tracking of your physical location at all times.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We are not liable for any damages, even if we were negligent or aware of the possibility.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Attempts to completely absolve the company of all responsibility, even for negligence.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may read your private messages to improve our advertising algorithms.",
+    "risk": "danger",
+    "category": "Privacy Violation",
+    "explanation": "Severe violation of communication privacy for commercial gain.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You agree to indemnify and hold us harmless from any claims arising from your use of the service.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Shifts all legal and financial burden onto the user, even for the platform's failures.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We retain the right to collect data from your microphone at any time.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Extremely invasive surveillance of your offline environment.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "By using our service, you consent to us sharing your complete browsing history with our affiliates.",
+    "risk": "danger",
+    "category": "Data Sharing",
+    "explanation": "Massive overcollection and sharing of sensitive web activity.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We collect your email address when you create an account to provide you with our services.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard collection of necessary contact information for account creation.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "You can delete your account and all associated data at any time through your account settings.",
+    "risk": "safe",
+    "category": "Data Rights",
+    "explanation": "Gives the user full control to delete their data.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We use industry-standard encryption to protect your personal information during transmission.",
+    "risk": "safe",
+    "category": "Security",
+    "explanation": "Standard security practice to protect user data.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We do not sell your personal information to third parties.",
+    "risk": "safe",
+    "category": "Data Sharing",
+    "explanation": "Explicitly protects user data from being sold.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "You retain all ownership rights to the content you upload to our platform.",
+    "risk": "safe",
+    "category": "IP Rights",
+    "explanation": "Ensures the user keeps ownership of their own content.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We will notify you at least 30 days in advance of any material changes to these terms.",
+    "risk": "safe",
+    "category": "Updates",
+    "explanation": "Provides reasonable notice before changing the rules.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "You may opt out of receiving promotional emails by clicking the unsubscribe link in any email.",
+    "risk": "safe",
+    "category": "Communication",
+    "explanation": "Standard opt-out mechanism for marketing.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "This agreement is governed by the laws of the State of California.",
+    "risk": "safe",
+    "category": "Dispute Resolution",
+    "explanation": "Standard choice of law provision.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We log your IP address to prevent fraud and abuse on our platform.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard security practice with a clear, legitimate purpose.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "If you are under 13, you may not use our services.",
+    "risk": "safe",
+    "category": "Age Restrictions",
+    "explanation": "Standard compliance with COPPA.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may suspend your account if you violate these Terms of Service.",
+    "risk": "safe",
+    "category": "Termination",
+    "explanation": "Standard enforcement of terms.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You are responsible for keeping your password secure.",
+    "risk": "safe",
+    "category": "User Responsibilities",
+    "explanation": "Standard user security responsibility.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may share your anonymized usage data with our analytics partners.",
+    "risk": "watch",
+    "category": "Data Sharing",
+    "explanation": "Data is anonymized, but still shared with third parties for analytics.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We use cookies and similar technologies to track your activity on our website.",
+    "risk": "watch",
+    "category": "Tracking",
+    "explanation": "Standard tracking, but merits awareness of how activity is monitored.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "Our service may contain links to third-party websites not controlled by us.",
+    "risk": "watch",
+    "category": "Third Parties",
+    "explanation": "Standard disclaimer, reminding you that other sites have their own rules.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may contact you with promotional offers from our affiliates.",
+    "risk": "watch",
+    "category": "Communication",
+    "explanation": "Allows affiliate marketing, which may result in more emails.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We retain your data for as long as your account is active or as needed to provide you services.",
+    "risk": "watch",
+    "category": "Data Retention",
+    "explanation": "Data is kept indefinitely while the account is open.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You grant us a license to use your uploaded content to operate and improve our services.",
+    "risk": "watch",
+    "category": "IP Rights",
+    "explanation": "Standard operating license, but gives the platform broad rights to use your content.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may collect information about your device, including hardware model and OS.",
+    "risk": "watch",
+    "category": "Data Collection",
+    "explanation": "Collects detailed device profiling data.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "Our services are provided 'as is' without any warranties.",
+    "risk": "watch",
+    "category": "Liability",
+    "explanation": "Standard disclaimer limiting their legal liability for issues.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may process your data on servers located outside your home country.",
+    "risk": "watch",
+    "category": "Data Transfer",
+    "explanation": "Data may be subject to different privacy laws internationally.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may update these terms occasionally, and your continued use implies consent.",
+    "risk": "watch",
+    "category": "Updates",
+    "explanation": "Silent updates without active confirmation.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "If our company is acquired, your data will be transferred to the new owners.",
+    "risk": "watch",
+    "category": "Business Transfer",
+    "explanation": "Your data changes hands if the company is sold.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may use your personal information to personalize the advertising you see.",
+    "risk": "watch",
+    "category": "Targeted Ads",
+    "explanation": "Uses your data for targeted advertising profiles.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may sell your personal data to third-party marketing partners.",
+    "risk": "danger",
+    "category": "Data Selling",
+    "explanation": "Explicitly monetizes your personal data by selling it to third parties.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You waive your right to participate in a class action lawsuit against us.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Severely limits your legal recourse by preventing collective action.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "All disputes must be resolved through binding arbitration.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Forces you out of public courts into private arbitration.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We reserve the right to change these terms at any time without prior notice.",
+    "risk": "danger",
+    "category": "Updates",
+    "explanation": "Allows them to change the rules at any time without telling you.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "You grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and distribute your content.",
+    "risk": "danger",
+    "category": "IP Rights",
+    "explanation": "You permanently give up essentially all rights to your intellectual property.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may terminate your account at any time, for any reason, without notice or liability.",
+    "risk": "danger",
+    "category": "Termination",
+    "explanation": "Extremely broad termination rights with no protection for the user.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We collect your precise geolocation data continuously in the background.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Highly invasive tracking of your physical location at all times.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We are not liable for any damages, even if we were negligent or aware of the possibility.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Attempts to completely absolve the company of all responsibility, even for negligence.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may read your private messages to improve our advertising algorithms.",
+    "risk": "danger",
+    "category": "Privacy Violation",
+    "explanation": "Severe violation of communication privacy for commercial gain.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You agree to indemnify and hold us harmless from any claims arising from your use of the service.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Shifts all legal and financial burden onto the user, even for the platform's failures.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We retain the right to collect data from your microphone at any time.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Extremely invasive surveillance of your offline environment.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "By using our service, you consent to us sharing your complete browsing history with our affiliates.",
+    "risk": "danger",
+    "category": "Data Sharing",
+    "explanation": "Massive overcollection and sharing of sensitive web activity.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We collect your email address when you create an account to provide you with our services.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard collection of necessary contact information for account creation.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You can delete your account and all associated data at any time through your account settings.",
+    "risk": "safe",
+    "category": "Data Rights",
+    "explanation": "Gives the user full control to delete their data.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We use industry-standard encryption to protect your personal information during transmission.",
+    "risk": "safe",
+    "category": "Security",
+    "explanation": "Standard security practice to protect user data.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We do not sell your personal information to third parties.",
+    "risk": "safe",
+    "category": "Data Sharing",
+    "explanation": "Explicitly protects user data from being sold.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You retain all ownership rights to the content you upload to our platform.",
+    "risk": "safe",
+    "category": "IP Rights",
+    "explanation": "Ensures the user keeps ownership of their own content.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We will notify you at least 30 days in advance of any material changes to these terms.",
+    "risk": "safe",
+    "category": "Updates",
+    "explanation": "Provides reasonable notice before changing the rules.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "You may opt out of receiving promotional emails by clicking the unsubscribe link in any email.",
+    "risk": "safe",
+    "category": "Communication",
+    "explanation": "Standard opt-out mechanism for marketing.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "This agreement is governed by the laws of the State of California.",
+    "risk": "safe",
+    "category": "Dispute Resolution",
+    "explanation": "Standard choice of law provision.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We log your IP address to prevent fraud and abuse on our platform.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard security practice with a clear, legitimate purpose.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "If you are under 13, you may not use our services.",
+    "risk": "safe",
+    "category": "Age Restrictions",
+    "explanation": "Standard compliance with COPPA.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may suspend your account if you violate these Terms of Service.",
+    "risk": "safe",
+    "category": "Termination",
+    "explanation": "Standard enforcement of terms.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You are responsible for keeping your password secure.",
+    "risk": "safe",
+    "category": "User Responsibilities",
+    "explanation": "Standard user security responsibility.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may share your anonymized usage data with our analytics partners.",
+    "risk": "watch",
+    "category": "Data Sharing",
+    "explanation": "Data is anonymized, but still shared with third parties for analytics.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We use cookies and similar technologies to track your activity on our website.",
+    "risk": "watch",
+    "category": "Tracking",
+    "explanation": "Standard tracking, but merits awareness of how activity is monitored.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "Our service may contain links to third-party websites not controlled by us.",
+    "risk": "watch",
+    "category": "Third Parties",
+    "explanation": "Standard disclaimer, reminding you that other sites have their own rules.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may contact you with promotional offers from our affiliates.",
+    "risk": "watch",
+    "category": "Communication",
+    "explanation": "Allows affiliate marketing, which may result in more emails.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We retain your data for as long as your account is active or as needed to provide you services.",
+    "risk": "watch",
+    "category": "Data Retention",
+    "explanation": "Data is kept indefinitely while the account is open.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "You grant us a license to use your uploaded content to operate and improve our services.",
+    "risk": "watch",
+    "category": "IP Rights",
+    "explanation": "Standard operating license, but gives the platform broad rights to use your content.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may collect information about your device, including hardware model and OS.",
+    "risk": "watch",
+    "category": "Data Collection",
+    "explanation": "Collects detailed device profiling data.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "Our services are provided 'as is' without any warranties.",
+    "risk": "watch",
+    "category": "Liability",
+    "explanation": "Standard disclaimer limiting their legal liability for issues.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We may process your data on servers located outside your home country.",
+    "risk": "watch",
+    "category": "Data Transfer",
+    "explanation": "Data may be subject to different privacy laws internationally.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may update these terms occasionally, and your continued use implies consent.",
+    "risk": "watch",
+    "category": "Updates",
+    "explanation": "Silent updates without active confirmation.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "If our company is acquired, your data will be transferred to the new owners.",
+    "risk": "watch",
+    "category": "Business Transfer",
+    "explanation": "Your data changes hands if the company is sold.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may use your personal information to personalize the advertising you see.",
+    "risk": "watch",
+    "category": "Targeted Ads",
+    "explanation": "Uses your data for targeted advertising profiles.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may sell your personal data to third-party marketing partners.",
+    "risk": "danger",
+    "category": "Data Selling",
+    "explanation": "Explicitly monetizes your personal data by selling it to third parties.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You waive your right to participate in a class action lawsuit against us.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Severely limits your legal recourse by preventing collective action.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "All disputes must be resolved through binding arbitration.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Forces you out of public courts into private arbitration.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We reserve the right to change these terms at any time without prior notice.",
+    "risk": "danger",
+    "category": "Updates",
+    "explanation": "Allows them to change the rules at any time without telling you.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and distribute your content.",
+    "risk": "danger",
+    "category": "IP Rights",
+    "explanation": "You permanently give up essentially all rights to your intellectual property.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may terminate your account at any time, for any reason, without notice or liability.",
+    "risk": "danger",
+    "category": "Termination",
+    "explanation": "Extremely broad termination rights with no protection for the user.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We collect your precise geolocation data continuously in the background.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Highly invasive tracking of your physical location at all times.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We are not liable for any damages, even if we were negligent or aware of the possibility.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Attempts to completely absolve the company of all responsibility, even for negligence.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may read your private messages to improve our advertising algorithms.",
+    "risk": "danger",
+    "category": "Privacy Violation",
+    "explanation": "Severe violation of communication privacy for commercial gain.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You agree to indemnify and hold us harmless from any claims arising from your use of the service.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Shifts all legal and financial burden onto the user, even for the platform's failures.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We retain the right to collect data from your microphone at any time.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Extremely invasive surveillance of your offline environment.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "By using our service, you consent to us sharing your complete browsing history with our affiliates.",
+    "risk": "danger",
+    "category": "Data Sharing",
+    "explanation": "Massive overcollection and sharing of sensitive web activity.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We collect your email address when you create an account to provide you with our services.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard collection of necessary contact information for account creation.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "You can delete your account and all associated data at any time through your account settings.",
+    "risk": "safe",
+    "category": "Data Rights",
+    "explanation": "Gives the user full control to delete their data.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We use industry-standard encryption to protect your personal information during transmission.",
+    "risk": "safe",
+    "category": "Security",
+    "explanation": "Standard security practice to protect user data.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We do not sell your personal information to third parties.",
+    "risk": "safe",
+    "category": "Data Sharing",
+    "explanation": "Explicitly protects user data from being sold.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You retain all ownership rights to the content you upload to our platform.",
+    "risk": "safe",
+    "category": "IP Rights",
+    "explanation": "Ensures the user keeps ownership of their own content.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We will notify you at least 30 days in advance of any material changes to these terms.",
+    "risk": "safe",
+    "category": "Updates",
+    "explanation": "Provides reasonable notice before changing the rules.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You may opt out of receiving promotional emails by clicking the unsubscribe link in any email.",
+    "risk": "safe",
+    "category": "Communication",
+    "explanation": "Standard opt-out mechanism for marketing.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "This agreement is governed by the laws of the State of California.",
+    "risk": "safe",
+    "category": "Dispute Resolution",
+    "explanation": "Standard choice of law provision.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We log your IP address to prevent fraud and abuse on our platform.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard security practice with a clear, legitimate purpose.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "If you are under 13, you may not use our services.",
+    "risk": "safe",
+    "category": "Age Restrictions",
+    "explanation": "Standard compliance with COPPA.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We may suspend your account if you violate these Terms of Service.",
+    "risk": "safe",
+    "category": "Termination",
+    "explanation": "Standard enforcement of terms.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You are responsible for keeping your password secure.",
+    "risk": "safe",
+    "category": "User Responsibilities",
+    "explanation": "Standard user security responsibility.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may share your anonymized usage data with our analytics partners.",
+    "risk": "watch",
+    "category": "Data Sharing",
+    "explanation": "Data is anonymized, but still shared with third parties for analytics.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We use cookies and similar technologies to track your activity on our website.",
+    "risk": "watch",
+    "category": "Tracking",
+    "explanation": "Standard tracking, but merits awareness of how activity is monitored.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "Our service may contain links to third-party websites not controlled by us.",
+    "risk": "watch",
+    "category": "Third Parties",
+    "explanation": "Standard disclaimer, reminding you that other sites have their own rules.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may contact you with promotional offers from our affiliates.",
+    "risk": "watch",
+    "category": "Communication",
+    "explanation": "Allows affiliate marketing, which may result in more emails.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We retain your data for as long as your account is active or as needed to provide you services.",
+    "risk": "watch",
+    "category": "Data Retention",
+    "explanation": "Data is kept indefinitely while the account is open.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "You grant us a license to use your uploaded content to operate and improve our services.",
+    "risk": "watch",
+    "category": "IP Rights",
+    "explanation": "Standard operating license, but gives the platform broad rights to use your content.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We may collect information about your device, including hardware model and OS.",
+    "risk": "watch",
+    "category": "Data Collection",
+    "explanation": "Collects detailed device profiling data.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "Our services are provided 'as is' without any warranties.",
+    "risk": "watch",
+    "category": "Liability",
+    "explanation": "Standard disclaimer limiting their legal liability for issues.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may process your data on servers located outside your home country.",
+    "risk": "watch",
+    "category": "Data Transfer",
+    "explanation": "Data may be subject to different privacy laws internationally.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may update these terms occasionally, and your continued use implies consent.",
+    "risk": "watch",
+    "category": "Updates",
+    "explanation": "Silent updates without active confirmation.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "If our company is acquired, your data will be transferred to the new owners.",
+    "risk": "watch",
+    "category": "Business Transfer",
+    "explanation": "Your data changes hands if the company is sold.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may use your personal information to personalize the advertising you see.",
+    "risk": "watch",
+    "category": "Targeted Ads",
+    "explanation": "Uses your data for targeted advertising profiles.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may sell your personal data to third-party marketing partners.",
+    "risk": "danger",
+    "category": "Data Selling",
+    "explanation": "Explicitly monetizes your personal data by selling it to third parties.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "You waive your right to participate in a class action lawsuit against us.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Severely limits your legal recourse by preventing collective action.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "All disputes must be resolved through binding arbitration.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Forces you out of public courts into private arbitration.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We reserve the right to change these terms at any time without prior notice.",
+    "risk": "danger",
+    "category": "Updates",
+    "explanation": "Allows them to change the rules at any time without telling you.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and distribute your content.",
+    "risk": "danger",
+    "category": "IP Rights",
+    "explanation": "You permanently give up essentially all rights to your intellectual property.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may terminate your account at any time, for any reason, without notice or liability.",
+    "risk": "danger",
+    "category": "Termination",
+    "explanation": "Extremely broad termination rights with no protection for the user.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We collect your precise geolocation data continuously in the background.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Highly invasive tracking of your physical location at all times.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We are not liable for any damages, even if we were negligent or aware of the possibility.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Attempts to completely absolve the company of all responsibility, even for negligence.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may read your private messages to improve our advertising algorithms.",
+    "risk": "danger",
+    "category": "Privacy Violation",
+    "explanation": "Severe violation of communication privacy for commercial gain.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You agree to indemnify and hold us harmless from any claims arising from your use of the service.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Shifts all legal and financial burden onto the user, even for the platform's failures.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We retain the right to collect data from your microphone at any time.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Extremely invasive surveillance of your offline environment.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "By using our service, you consent to us sharing your complete browsing history with our affiliates.",
+    "risk": "danger",
+    "category": "Data Sharing",
+    "explanation": "Massive overcollection and sharing of sensitive web activity.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We collect your email address when you create an account to provide you with our services.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard collection of necessary contact information for account creation.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "You can delete your account and all associated data at any time through your account settings.",
+    "risk": "safe",
+    "category": "Data Rights",
+    "explanation": "Gives the user full control to delete their data.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We use industry-standard encryption to protect your personal information during transmission.",
+    "risk": "safe",
+    "category": "Security",
+    "explanation": "Standard security practice to protect user data.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We do not sell your personal information to third parties.",
+    "risk": "safe",
+    "category": "Data Sharing",
+    "explanation": "Explicitly protects user data from being sold.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You retain all ownership rights to the content you upload to our platform.",
+    "risk": "safe",
+    "category": "IP Rights",
+    "explanation": "Ensures the user keeps ownership of their own content.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We will notify you at least 30 days in advance of any material changes to these terms.",
+    "risk": "safe",
+    "category": "Updates",
+    "explanation": "Provides reasonable notice before changing the rules.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You may opt out of receiving promotional emails by clicking the unsubscribe link in any email.",
+    "risk": "safe",
+    "category": "Communication",
+    "explanation": "Standard opt-out mechanism for marketing.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "This agreement is governed by the laws of the State of California.",
+    "risk": "safe",
+    "category": "Dispute Resolution",
+    "explanation": "Standard choice of law provision.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We log your IP address to prevent fraud and abuse on our platform.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard security practice with a clear, legitimate purpose.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "If you are under 13, you may not use our services.",
+    "risk": "safe",
+    "category": "Age Restrictions",
+    "explanation": "Standard compliance with COPPA.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We may suspend your account if you violate these Terms of Service.",
+    "risk": "safe",
+    "category": "Termination",
+    "explanation": "Standard enforcement of terms.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "You are responsible for keeping your password secure.",
+    "risk": "safe",
+    "category": "User Responsibilities",
+    "explanation": "Standard user security responsibility.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may share your anonymized usage data with our analytics partners.",
+    "risk": "watch",
+    "category": "Data Sharing",
+    "explanation": "Data is anonymized, but still shared with third parties for analytics.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We use cookies and similar technologies to track your activity on our website.",
+    "risk": "watch",
+    "category": "Tracking",
+    "explanation": "Standard tracking, but merits awareness of how activity is monitored.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "Our service may contain links to third-party websites not controlled by us.",
+    "risk": "watch",
+    "category": "Third Parties",
+    "explanation": "Standard disclaimer, reminding you that other sites have their own rules.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may contact you with promotional offers from our affiliates.",
+    "risk": "watch",
+    "category": "Communication",
+    "explanation": "Allows affiliate marketing, which may result in more emails.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We retain your data for as long as your account is active or as needed to provide you services.",
+    "risk": "watch",
+    "category": "Data Retention",
+    "explanation": "Data is kept indefinitely while the account is open.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You grant us a license to use your uploaded content to operate and improve our services.",
+    "risk": "watch",
+    "category": "IP Rights",
+    "explanation": "Standard operating license, but gives the platform broad rights to use your content.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may collect information about your device, including hardware model and OS.",
+    "risk": "watch",
+    "category": "Data Collection",
+    "explanation": "Collects detailed device profiling data.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "Our services are provided 'as is' without any warranties.",
+    "risk": "watch",
+    "category": "Liability",
+    "explanation": "Standard disclaimer limiting their legal liability for issues.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may process your data on servers located outside your home country.",
+    "risk": "watch",
+    "category": "Data Transfer",
+    "explanation": "Data may be subject to different privacy laws internationally.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may update these terms occasionally, and your continued use implies consent.",
+    "risk": "watch",
+    "category": "Updates",
+    "explanation": "Silent updates without active confirmation.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "If our company is acquired, your data will be transferred to the new owners.",
+    "risk": "watch",
+    "category": "Business Transfer",
+    "explanation": "Your data changes hands if the company is sold.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may use your personal information to personalize the advertising you see.",
+    "risk": "watch",
+    "category": "Targeted Ads",
+    "explanation": "Uses your data for targeted advertising profiles.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We may sell your personal data to third-party marketing partners.",
+    "risk": "danger",
+    "category": "Data Selling",
+    "explanation": "Explicitly monetizes your personal data by selling it to third parties.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "You waive your right to participate in a class action lawsuit against us.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Severely limits your legal recourse by preventing collective action.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "All disputes must be resolved through binding arbitration.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Forces you out of public courts into private arbitration.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We reserve the right to change these terms at any time without prior notice.",
+    "risk": "danger",
+    "category": "Updates",
+    "explanation": "Allows them to change the rules at any time without telling you.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "You grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and distribute your content.",
+    "risk": "danger",
+    "category": "IP Rights",
+    "explanation": "You permanently give up essentially all rights to your intellectual property.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We may terminate your account at any time, for any reason, without notice or liability.",
+    "risk": "danger",
+    "category": "Termination",
+    "explanation": "Extremely broad termination rights with no protection for the user.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We collect your precise geolocation data continuously in the background.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Highly invasive tracking of your physical location at all times.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We are not liable for any damages, even if we were negligent or aware of the possibility.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Attempts to completely absolve the company of all responsibility, even for negligence.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may read your private messages to improve our advertising algorithms.",
+    "risk": "danger",
+    "category": "Privacy Violation",
+    "explanation": "Severe violation of communication privacy for commercial gain.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You agree to indemnify and hold us harmless from any claims arising from your use of the service.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Shifts all legal and financial burden onto the user, even for the platform's failures.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We retain the right to collect data from your microphone at any time.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Extremely invasive surveillance of your offline environment.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "By using our service, you consent to us sharing your complete browsing history with our affiliates.",
+    "risk": "danger",
+    "category": "Data Sharing",
+    "explanation": "Massive overcollection and sharing of sensitive web activity.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We collect your email address when you create an account to provide you with our services.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard collection of necessary contact information for account creation.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "You can delete your account and all associated data at any time through your account settings.",
+    "risk": "safe",
+    "category": "Data Rights",
+    "explanation": "Gives the user full control to delete their data.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We use industry-standard encryption to protect your personal information during transmission.",
+    "risk": "safe",
+    "category": "Security",
+    "explanation": "Standard security practice to protect user data.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We do not sell your personal information to third parties.",
+    "risk": "safe",
+    "category": "Data Sharing",
+    "explanation": "Explicitly protects user data from being sold.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "You retain all ownership rights to the content you upload to our platform.",
+    "risk": "safe",
+    "category": "IP Rights",
+    "explanation": "Ensures the user keeps ownership of their own content.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We will notify you at least 30 days in advance of any material changes to these terms.",
+    "risk": "safe",
+    "category": "Updates",
+    "explanation": "Provides reasonable notice before changing the rules.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You may opt out of receiving promotional emails by clicking the unsubscribe link in any email.",
+    "risk": "safe",
+    "category": "Communication",
+    "explanation": "Standard opt-out mechanism for marketing.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "This agreement is governed by the laws of the State of California.",
+    "risk": "safe",
+    "category": "Dispute Resolution",
+    "explanation": "Standard choice of law provision.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We log your IP address to prevent fraud and abuse on our platform.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard security practice with a clear, legitimate purpose.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "If you are under 13, you may not use our services.",
+    "risk": "safe",
+    "category": "Age Restrictions",
+    "explanation": "Standard compliance with COPPA.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may suspend your account if you violate these Terms of Service.",
+    "risk": "safe",
+    "category": "Termination",
+    "explanation": "Standard enforcement of terms.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You are responsible for keeping your password secure.",
+    "risk": "safe",
+    "category": "User Responsibilities",
+    "explanation": "Standard user security responsibility.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may share your anonymized usage data with our analytics partners.",
+    "risk": "watch",
+    "category": "Data Sharing",
+    "explanation": "Data is anonymized, but still shared with third parties for analytics.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We use cookies and similar technologies to track your activity on our website.",
+    "risk": "watch",
+    "category": "Tracking",
+    "explanation": "Standard tracking, but merits awareness of how activity is monitored.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "Our service may contain links to third-party websites not controlled by us.",
+    "risk": "watch",
+    "category": "Third Parties",
+    "explanation": "Standard disclaimer, reminding you that other sites have their own rules.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may contact you with promotional offers from our affiliates.",
+    "risk": "watch",
+    "category": "Communication",
+    "explanation": "Allows affiliate marketing, which may result in more emails.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We retain your data for as long as your account is active or as needed to provide you services.",
+    "risk": "watch",
+    "category": "Data Retention",
+    "explanation": "Data is kept indefinitely while the account is open.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "You grant us a license to use your uploaded content to operate and improve our services.",
+    "risk": "watch",
+    "category": "IP Rights",
+    "explanation": "Standard operating license, but gives the platform broad rights to use your content.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may collect information about your device, including hardware model and OS.",
+    "risk": "watch",
+    "category": "Data Collection",
+    "explanation": "Collects detailed device profiling data.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "Our services are provided 'as is' without any warranties.",
+    "risk": "watch",
+    "category": "Liability",
+    "explanation": "Standard disclaimer limiting their legal liability for issues.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may process your data on servers located outside your home country.",
+    "risk": "watch",
+    "category": "Data Transfer",
+    "explanation": "Data may be subject to different privacy laws internationally.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may update these terms occasionally, and your continued use implies consent.",
+    "risk": "watch",
+    "category": "Updates",
+    "explanation": "Silent updates without active confirmation.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "If our company is acquired, your data will be transferred to the new owners.",
+    "risk": "watch",
+    "category": "Business Transfer",
+    "explanation": "Your data changes hands if the company is sold.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may use your personal information to personalize the advertising you see.",
+    "risk": "watch",
+    "category": "Targeted Ads",
+    "explanation": "Uses your data for targeted advertising profiles.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may sell your personal data to third-party marketing partners.",
+    "risk": "danger",
+    "category": "Data Selling",
+    "explanation": "Explicitly monetizes your personal data by selling it to third parties.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "You waive your right to participate in a class action lawsuit against us.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Severely limits your legal recourse by preventing collective action.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "All disputes must be resolved through binding arbitration.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Forces you out of public courts into private arbitration.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We reserve the right to change these terms at any time without prior notice.",
+    "risk": "danger",
+    "category": "Updates",
+    "explanation": "Allows them to change the rules at any time without telling you.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "You grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and distribute your content.",
+    "risk": "danger",
+    "category": "IP Rights",
+    "explanation": "You permanently give up essentially all rights to your intellectual property.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We may terminate your account at any time, for any reason, without notice or liability.",
+    "risk": "danger",
+    "category": "Termination",
+    "explanation": "Extremely broad termination rights with no protection for the user.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We collect your precise geolocation data continuously in the background.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Highly invasive tracking of your physical location at all times.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We are not liable for any damages, even if we were negligent or aware of the possibility.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Attempts to completely absolve the company of all responsibility, even for negligence.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may read your private messages to improve our advertising algorithms.",
+    "risk": "danger",
+    "category": "Privacy Violation",
+    "explanation": "Severe violation of communication privacy for commercial gain.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You agree to indemnify and hold us harmless from any claims arising from your use of the service.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Shifts all legal and financial burden onto the user, even for the platform's failures.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We retain the right to collect data from your microphone at any time.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Extremely invasive surveillance of your offline environment.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "By using our service, you consent to us sharing your complete browsing history with our affiliates.",
+    "risk": "danger",
+    "category": "Data Sharing",
+    "explanation": "Massive overcollection and sharing of sensitive web activity.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We collect your email address when you create an account to provide you with our services.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard collection of necessary contact information for account creation.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "You can delete your account and all associated data at any time through your account settings.",
+    "risk": "safe",
+    "category": "Data Rights",
+    "explanation": "Gives the user full control to delete their data.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We use industry-standard encryption to protect your personal information during transmission.",
+    "risk": "safe",
+    "category": "Security",
+    "explanation": "Standard security practice to protect user data.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We do not sell your personal information to third parties.",
+    "risk": "safe",
+    "category": "Data Sharing",
+    "explanation": "Explicitly protects user data from being sold.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You retain all ownership rights to the content you upload to our platform.",
+    "risk": "safe",
+    "category": "IP Rights",
+    "explanation": "Ensures the user keeps ownership of their own content.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We will notify you at least 30 days in advance of any material changes to these terms.",
+    "risk": "safe",
+    "category": "Updates",
+    "explanation": "Provides reasonable notice before changing the rules.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "You may opt out of receiving promotional emails by clicking the unsubscribe link in any email.",
+    "risk": "safe",
+    "category": "Communication",
+    "explanation": "Standard opt-out mechanism for marketing.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "This agreement is governed by the laws of the State of California.",
+    "risk": "safe",
+    "category": "Dispute Resolution",
+    "explanation": "Standard choice of law provision.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We log your IP address to prevent fraud and abuse on our platform.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard security practice with a clear, legitimate purpose.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "If you are under 13, you may not use our services.",
+    "risk": "safe",
+    "category": "Age Restrictions",
+    "explanation": "Standard compliance with COPPA.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may suspend your account if you violate these Terms of Service.",
+    "risk": "safe",
+    "category": "Termination",
+    "explanation": "Standard enforcement of terms.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You are responsible for keeping your password secure.",
+    "risk": "safe",
+    "category": "User Responsibilities",
+    "explanation": "Standard user security responsibility.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We may share your anonymized usage data with our analytics partners.",
+    "risk": "watch",
+    "category": "Data Sharing",
+    "explanation": "Data is anonymized, but still shared with third parties for analytics.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We use cookies and similar technologies to track your activity on our website.",
+    "risk": "watch",
+    "category": "Tracking",
+    "explanation": "Standard tracking, but merits awareness of how activity is monitored.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "Our service may contain links to third-party websites not controlled by us.",
+    "risk": "watch",
+    "category": "Third Parties",
+    "explanation": "Standard disclaimer, reminding you that other sites have their own rules.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may contact you with promotional offers from our affiliates.",
+    "risk": "watch",
+    "category": "Communication",
+    "explanation": "Allows affiliate marketing, which may result in more emails.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We retain your data for as long as your account is active or as needed to provide you services.",
+    "risk": "watch",
+    "category": "Data Retention",
+    "explanation": "Data is kept indefinitely while the account is open.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "You grant us a license to use your uploaded content to operate and improve our services.",
+    "risk": "watch",
+    "category": "IP Rights",
+    "explanation": "Standard operating license, but gives the platform broad rights to use your content.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may collect information about your device, including hardware model and OS.",
+    "risk": "watch",
+    "category": "Data Collection",
+    "explanation": "Collects detailed device profiling data.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "Our services are provided 'as is' without any warranties.",
+    "risk": "watch",
+    "category": "Liability",
+    "explanation": "Standard disclaimer limiting their legal liability for issues.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may process your data on servers located outside your home country.",
+    "risk": "watch",
+    "category": "Data Transfer",
+    "explanation": "Data may be subject to different privacy laws internationally.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may update these terms occasionally, and your continued use implies consent.",
+    "risk": "watch",
+    "category": "Updates",
+    "explanation": "Silent updates without active confirmation.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "If our company is acquired, your data will be transferred to the new owners.",
+    "risk": "watch",
+    "category": "Business Transfer",
+    "explanation": "Your data changes hands if the company is sold.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We may use your personal information to personalize the advertising you see.",
+    "risk": "watch",
+    "category": "Targeted Ads",
+    "explanation": "Uses your data for targeted advertising profiles.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may sell your personal data to third-party marketing partners.",
+    "risk": "danger",
+    "category": "Data Selling",
+    "explanation": "Explicitly monetizes your personal data by selling it to third parties.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "You waive your right to participate in a class action lawsuit against us.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Severely limits your legal recourse by preventing collective action.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "All disputes must be resolved through binding arbitration.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Forces you out of public courts into private arbitration.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We reserve the right to change these terms at any time without prior notice.",
+    "risk": "danger",
+    "category": "Updates",
+    "explanation": "Allows them to change the rules at any time without telling you.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "You grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and distribute your content.",
+    "risk": "danger",
+    "category": "IP Rights",
+    "explanation": "You permanently give up essentially all rights to your intellectual property.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may terminate your account at any time, for any reason, without notice or liability.",
+    "risk": "danger",
+    "category": "Termination",
+    "explanation": "Extremely broad termination rights with no protection for the user.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We collect your precise geolocation data continuously in the background.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Highly invasive tracking of your physical location at all times.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We are not liable for any damages, even if we were negligent or aware of the possibility.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Attempts to completely absolve the company of all responsibility, even for negligence.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may read your private messages to improve our advertising algorithms.",
+    "risk": "danger",
+    "category": "Privacy Violation",
+    "explanation": "Severe violation of communication privacy for commercial gain.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You agree to indemnify and hold us harmless from any claims arising from your use of the service.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Shifts all legal and financial burden onto the user, even for the platform's failures.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We retain the right to collect data from your microphone at any time.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Extremely invasive surveillance of your offline environment.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "By using our service, you consent to us sharing your complete browsing history with our affiliates.",
+    "risk": "danger",
+    "category": "Data Sharing",
+    "explanation": "Massive overcollection and sharing of sensitive web activity.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We collect your email address when you create an account to provide you with our services.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard collection of necessary contact information for account creation.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You can delete your account and all associated data at any time through your account settings.",
+    "risk": "safe",
+    "category": "Data Rights",
+    "explanation": "Gives the user full control to delete their data.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We use industry-standard encryption to protect your personal information during transmission.",
+    "risk": "safe",
+    "category": "Security",
+    "explanation": "Standard security practice to protect user data.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We do not sell your personal information to third parties.",
+    "risk": "safe",
+    "category": "Data Sharing",
+    "explanation": "Explicitly protects user data from being sold.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "You retain all ownership rights to the content you upload to our platform.",
+    "risk": "safe",
+    "category": "IP Rights",
+    "explanation": "Ensures the user keeps ownership of their own content.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We will notify you at least 30 days in advance of any material changes to these terms.",
+    "risk": "safe",
+    "category": "Updates",
+    "explanation": "Provides reasonable notice before changing the rules.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "You may opt out of receiving promotional emails by clicking the unsubscribe link in any email.",
+    "risk": "safe",
+    "category": "Communication",
+    "explanation": "Standard opt-out mechanism for marketing.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "This agreement is governed by the laws of the State of California.",
+    "risk": "safe",
+    "category": "Dispute Resolution",
+    "explanation": "Standard choice of law provision.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We log your IP address to prevent fraud and abuse on our platform.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard security practice with a clear, legitimate purpose.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "If you are under 13, you may not use our services.",
+    "risk": "safe",
+    "category": "Age Restrictions",
+    "explanation": "Standard compliance with COPPA.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may suspend your account if you violate these Terms of Service.",
+    "risk": "safe",
+    "category": "Termination",
+    "explanation": "Standard enforcement of terms.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "You are responsible for keeping your password secure.",
+    "risk": "safe",
+    "category": "User Responsibilities",
+    "explanation": "Standard user security responsibility.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may share your anonymized usage data with our analytics partners.",
+    "risk": "watch",
+    "category": "Data Sharing",
+    "explanation": "Data is anonymized, but still shared with third parties for analytics.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We use cookies and similar technologies to track your activity on our website.",
+    "risk": "watch",
+    "category": "Tracking",
+    "explanation": "Standard tracking, but merits awareness of how activity is monitored.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "Our service may contain links to third-party websites not controlled by us.",
+    "risk": "watch",
+    "category": "Third Parties",
+    "explanation": "Standard disclaimer, reminding you that other sites have their own rules.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may contact you with promotional offers from our affiliates.",
+    "risk": "watch",
+    "category": "Communication",
+    "explanation": "Allows affiliate marketing, which may result in more emails.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We retain your data for as long as your account is active or as needed to provide you services.",
+    "risk": "watch",
+    "category": "Data Retention",
+    "explanation": "Data is kept indefinitely while the account is open.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You grant us a license to use your uploaded content to operate and improve our services.",
+    "risk": "watch",
+    "category": "IP Rights",
+    "explanation": "Standard operating license, but gives the platform broad rights to use your content.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may collect information about your device, including hardware model and OS.",
+    "risk": "watch",
+    "category": "Data Collection",
+    "explanation": "Collects detailed device profiling data.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "Our services are provided 'as is' without any warranties.",
+    "risk": "watch",
+    "category": "Liability",
+    "explanation": "Standard disclaimer limiting their legal liability for issues.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may process your data on servers located outside your home country.",
+    "risk": "watch",
+    "category": "Data Transfer",
+    "explanation": "Data may be subject to different privacy laws internationally.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may update these terms occasionally, and your continued use implies consent.",
+    "risk": "watch",
+    "category": "Updates",
+    "explanation": "Silent updates without active confirmation.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "If our company is acquired, your data will be transferred to the new owners.",
+    "risk": "watch",
+    "category": "Business Transfer",
+    "explanation": "Your data changes hands if the company is sold.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may use your personal information to personalize the advertising you see.",
+    "risk": "watch",
+    "category": "Targeted Ads",
+    "explanation": "Uses your data for targeted advertising profiles.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We may sell your personal data to third-party marketing partners.",
+    "risk": "danger",
+    "category": "Data Selling",
+    "explanation": "Explicitly monetizes your personal data by selling it to third parties.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You waive your right to participate in a class action lawsuit against us.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Severely limits your legal recourse by preventing collective action.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "All disputes must be resolved through binding arbitration.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Forces you out of public courts into private arbitration.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We reserve the right to change these terms at any time without prior notice.",
+    "risk": "danger",
+    "category": "Updates",
+    "explanation": "Allows them to change the rules at any time without telling you.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and distribute your content.",
+    "risk": "danger",
+    "category": "IP Rights",
+    "explanation": "You permanently give up essentially all rights to your intellectual property.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may terminate your account at any time, for any reason, without notice or liability.",
+    "risk": "danger",
+    "category": "Termination",
+    "explanation": "Extremely broad termination rights with no protection for the user.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We collect your precise geolocation data continuously in the background.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Highly invasive tracking of your physical location at all times.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We are not liable for any damages, even if we were negligent or aware of the possibility.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Attempts to completely absolve the company of all responsibility, even for negligence.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may read your private messages to improve our advertising algorithms.",
+    "risk": "danger",
+    "category": "Privacy Violation",
+    "explanation": "Severe violation of communication privacy for commercial gain.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "You agree to indemnify and hold us harmless from any claims arising from your use of the service.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Shifts all legal and financial burden onto the user, even for the platform's failures.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We retain the right to collect data from your microphone at any time.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Extremely invasive surveillance of your offline environment.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "By using our service, you consent to us sharing your complete browsing history with our affiliates.",
+    "risk": "danger",
+    "category": "Data Sharing",
+    "explanation": "Massive overcollection and sharing of sensitive web activity.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We collect your email address when you create an account to provide you with our services.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard collection of necessary contact information for account creation.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You can delete your account and all associated data at any time through your account settings.",
+    "risk": "safe",
+    "category": "Data Rights",
+    "explanation": "Gives the user full control to delete their data.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We use industry-standard encryption to protect your personal information during transmission.",
+    "risk": "safe",
+    "category": "Security",
+    "explanation": "Standard security practice to protect user data.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We do not sell your personal information to third parties.",
+    "risk": "safe",
+    "category": "Data Sharing",
+    "explanation": "Explicitly protects user data from being sold.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You retain all ownership rights to the content you upload to our platform.",
+    "risk": "safe",
+    "category": "IP Rights",
+    "explanation": "Ensures the user keeps ownership of their own content.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We will notify you at least 30 days in advance of any material changes to these terms.",
+    "risk": "safe",
+    "category": "Updates",
+    "explanation": "Provides reasonable notice before changing the rules.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You may opt out of receiving promotional emails by clicking the unsubscribe link in any email.",
+    "risk": "safe",
+    "category": "Communication",
+    "explanation": "Standard opt-out mechanism for marketing.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "This agreement is governed by the laws of the State of California.",
+    "risk": "safe",
+    "category": "Dispute Resolution",
+    "explanation": "Standard choice of law provision.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We log your IP address to prevent fraud and abuse on our platform.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard security practice with a clear, legitimate purpose.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "If you are under 13, you may not use our services.",
+    "risk": "safe",
+    "category": "Age Restrictions",
+    "explanation": "Standard compliance with COPPA.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may suspend your account if you violate these Terms of Service.",
+    "risk": "safe",
+    "category": "Termination",
+    "explanation": "Standard enforcement of terms.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "You are responsible for keeping your password secure.",
+    "risk": "safe",
+    "category": "User Responsibilities",
+    "explanation": "Standard user security responsibility.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may share your anonymized usage data with our analytics partners.",
+    "risk": "watch",
+    "category": "Data Sharing",
+    "explanation": "Data is anonymized, but still shared with third parties for analytics.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We use cookies and similar technologies to track your activity on our website.",
+    "risk": "watch",
+    "category": "Tracking",
+    "explanation": "Standard tracking, but merits awareness of how activity is monitored.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "Our service may contain links to third-party websites not controlled by us.",
+    "risk": "watch",
+    "category": "Third Parties",
+    "explanation": "Standard disclaimer, reminding you that other sites have their own rules.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We may contact you with promotional offers from our affiliates.",
+    "risk": "watch",
+    "category": "Communication",
+    "explanation": "Allows affiliate marketing, which may result in more emails.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We retain your data for as long as your account is active or as needed to provide you services.",
+    "risk": "watch",
+    "category": "Data Retention",
+    "explanation": "Data is kept indefinitely while the account is open.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "You grant us a license to use your uploaded content to operate and improve our services.",
+    "risk": "watch",
+    "category": "IP Rights",
+    "explanation": "Standard operating license, but gives the platform broad rights to use your content.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may collect information about your device, including hardware model and OS.",
+    "risk": "watch",
+    "category": "Data Collection",
+    "explanation": "Collects detailed device profiling data.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "Our services are provided 'as is' without any warranties.",
+    "risk": "watch",
+    "category": "Liability",
+    "explanation": "Standard disclaimer limiting their legal liability for issues.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may process your data on servers located outside your home country.",
+    "risk": "watch",
+    "category": "Data Transfer",
+    "explanation": "Data may be subject to different privacy laws internationally.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may update these terms occasionally, and your continued use implies consent.",
+    "risk": "watch",
+    "category": "Updates",
+    "explanation": "Silent updates without active confirmation.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "If our company is acquired, your data will be transferred to the new owners.",
+    "risk": "watch",
+    "category": "Business Transfer",
+    "explanation": "Your data changes hands if the company is sold.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We may use your personal information to personalize the advertising you see.",
+    "risk": "watch",
+    "category": "Targeted Ads",
+    "explanation": "Uses your data for targeted advertising profiles.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We may sell your personal data to third-party marketing partners.",
+    "risk": "danger",
+    "category": "Data Selling",
+    "explanation": "Explicitly monetizes your personal data by selling it to third parties.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You waive your right to participate in a class action lawsuit against us.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Severely limits your legal recourse by preventing collective action.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "All disputes must be resolved through binding arbitration.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Forces you out of public courts into private arbitration.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We reserve the right to change these terms at any time without prior notice.",
+    "risk": "danger",
+    "category": "Updates",
+    "explanation": "Allows them to change the rules at any time without telling you.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and distribute your content.",
+    "risk": "danger",
+    "category": "IP Rights",
+    "explanation": "You permanently give up essentially all rights to your intellectual property.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may terminate your account at any time, for any reason, without notice or liability.",
+    "risk": "danger",
+    "category": "Termination",
+    "explanation": "Extremely broad termination rights with no protection for the user.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We collect your precise geolocation data continuously in the background.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Highly invasive tracking of your physical location at all times.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We are not liable for any damages, even if we were negligent or aware of the possibility.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Attempts to completely absolve the company of all responsibility, even for negligence.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may read your private messages to improve our advertising algorithms.",
+    "risk": "danger",
+    "category": "Privacy Violation",
+    "explanation": "Severe violation of communication privacy for commercial gain.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You agree to indemnify and hold us harmless from any claims arising from your use of the service.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Shifts all legal and financial burden onto the user, even for the platform's failures.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We retain the right to collect data from your microphone at any time.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Extremely invasive surveillance of your offline environment.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "By using our service, you consent to us sharing your complete browsing history with our affiliates.",
+    "risk": "danger",
+    "category": "Data Sharing",
+    "explanation": "Massive overcollection and sharing of sensitive web activity.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We collect your email address when you create an account to provide you with our services.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard collection of necessary contact information for account creation.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You can delete your account and all associated data at any time through your account settings.",
+    "risk": "safe",
+    "category": "Data Rights",
+    "explanation": "Gives the user full control to delete their data.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We use industry-standard encryption to protect your personal information during transmission.",
+    "risk": "safe",
+    "category": "Security",
+    "explanation": "Standard security practice to protect user data.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We do not sell your personal information to third parties.",
+    "risk": "safe",
+    "category": "Data Sharing",
+    "explanation": "Explicitly protects user data from being sold.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "You retain all ownership rights to the content you upload to our platform.",
+    "risk": "safe",
+    "category": "IP Rights",
+    "explanation": "Ensures the user keeps ownership of their own content.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We will notify you at least 30 days in advance of any material changes to these terms.",
+    "risk": "safe",
+    "category": "Updates",
+    "explanation": "Provides reasonable notice before changing the rules.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "You may opt out of receiving promotional emails by clicking the unsubscribe link in any email.",
+    "risk": "safe",
+    "category": "Communication",
+    "explanation": "Standard opt-out mechanism for marketing.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "This agreement is governed by the laws of the State of California.",
+    "risk": "safe",
+    "category": "Dispute Resolution",
+    "explanation": "Standard choice of law provision.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We log your IP address to prevent fraud and abuse on our platform.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard security practice with a clear, legitimate purpose.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "If you are under 13, you may not use our services.",
+    "risk": "safe",
+    "category": "Age Restrictions",
+    "explanation": "Standard compliance with COPPA.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may suspend your account if you violate these Terms of Service.",
+    "risk": "safe",
+    "category": "Termination",
+    "explanation": "Standard enforcement of terms.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You are responsible for keeping your password secure.",
+    "risk": "safe",
+    "category": "User Responsibilities",
+    "explanation": "Standard user security responsibility.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We may share your anonymized usage data with our analytics partners.",
+    "risk": "watch",
+    "category": "Data Sharing",
+    "explanation": "Data is anonymized, but still shared with third parties for analytics.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We use cookies and similar technologies to track your activity on our website.",
+    "risk": "watch",
+    "category": "Tracking",
+    "explanation": "Standard tracking, but merits awareness of how activity is monitored.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "Our service may contain links to third-party websites not controlled by us.",
+    "risk": "watch",
+    "category": "Third Parties",
+    "explanation": "Standard disclaimer, reminding you that other sites have their own rules.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may contact you with promotional offers from our affiliates.",
+    "risk": "watch",
+    "category": "Communication",
+    "explanation": "Allows affiliate marketing, which may result in more emails.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We retain your data for as long as your account is active or as needed to provide you services.",
+    "risk": "watch",
+    "category": "Data Retention",
+    "explanation": "Data is kept indefinitely while the account is open.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "You grant us a license to use your uploaded content to operate and improve our services.",
+    "risk": "watch",
+    "category": "IP Rights",
+    "explanation": "Standard operating license, but gives the platform broad rights to use your content.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may collect information about your device, including hardware model and OS.",
+    "risk": "watch",
+    "category": "Data Collection",
+    "explanation": "Collects detailed device profiling data.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "Our services are provided 'as is' without any warranties.",
+    "risk": "watch",
+    "category": "Liability",
+    "explanation": "Standard disclaimer limiting their legal liability for issues.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may process your data on servers located outside your home country.",
+    "risk": "watch",
+    "category": "Data Transfer",
+    "explanation": "Data may be subject to different privacy laws internationally.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may update these terms occasionally, and your continued use implies consent.",
+    "risk": "watch",
+    "category": "Updates",
+    "explanation": "Silent updates without active confirmation.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "If our company is acquired, your data will be transferred to the new owners.",
+    "risk": "watch",
+    "category": "Business Transfer",
+    "explanation": "Your data changes hands if the company is sold.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may use your personal information to personalize the advertising you see.",
+    "risk": "watch",
+    "category": "Targeted Ads",
+    "explanation": "Uses your data for targeted advertising profiles.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may sell your personal data to third-party marketing partners.",
+    "risk": "danger",
+    "category": "Data Selling",
+    "explanation": "Explicitly monetizes your personal data by selling it to third parties.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You waive your right to participate in a class action lawsuit against us.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Severely limits your legal recourse by preventing collective action.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "All disputes must be resolved through binding arbitration.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Forces you out of public courts into private arbitration.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We reserve the right to change these terms at any time without prior notice.",
+    "risk": "danger",
+    "category": "Updates",
+    "explanation": "Allows them to change the rules at any time without telling you.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and distribute your content.",
+    "risk": "danger",
+    "category": "IP Rights",
+    "explanation": "You permanently give up essentially all rights to your intellectual property.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may terminate your account at any time, for any reason, without notice or liability.",
+    "risk": "danger",
+    "category": "Termination",
+    "explanation": "Extremely broad termination rights with no protection for the user.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We collect your precise geolocation data continuously in the background.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Highly invasive tracking of your physical location at all times.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We are not liable for any damages, even if we were negligent or aware of the possibility.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Attempts to completely absolve the company of all responsibility, even for negligence.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may read your private messages to improve our advertising algorithms.",
+    "risk": "danger",
+    "category": "Privacy Violation",
+    "explanation": "Severe violation of communication privacy for commercial gain.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You agree to indemnify and hold us harmless from any claims arising from your use of the service.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Shifts all legal and financial burden onto the user, even for the platform's failures.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We retain the right to collect data from your microphone at any time.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Extremely invasive surveillance of your offline environment.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "By using our service, you consent to us sharing your complete browsing history with our affiliates.",
+    "risk": "danger",
+    "category": "Data Sharing",
+    "explanation": "Massive overcollection and sharing of sensitive web activity.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We collect your email address when you create an account to provide you with our services.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard collection of necessary contact information for account creation.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You can delete your account and all associated data at any time through your account settings.",
+    "risk": "safe",
+    "category": "Data Rights",
+    "explanation": "Gives the user full control to delete their data.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We use industry-standard encryption to protect your personal information during transmission.",
+    "risk": "safe",
+    "category": "Security",
+    "explanation": "Standard security practice to protect user data.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We do not sell your personal information to third parties.",
+    "risk": "safe",
+    "category": "Data Sharing",
+    "explanation": "Explicitly protects user data from being sold.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "You retain all ownership rights to the content you upload to our platform.",
+    "risk": "safe",
+    "category": "IP Rights",
+    "explanation": "Ensures the user keeps ownership of their own content.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We will notify you at least 30 days in advance of any material changes to these terms.",
+    "risk": "safe",
+    "category": "Updates",
+    "explanation": "Provides reasonable notice before changing the rules.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "You may opt out of receiving promotional emails by clicking the unsubscribe link in any email.",
+    "risk": "safe",
+    "category": "Communication",
+    "explanation": "Standard opt-out mechanism for marketing.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "This agreement is governed by the laws of the State of California.",
+    "risk": "safe",
+    "category": "Dispute Resolution",
+    "explanation": "Standard choice of law provision.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We log your IP address to prevent fraud and abuse on our platform.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard security practice with a clear, legitimate purpose.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "If you are under 13, you may not use our services.",
+    "risk": "safe",
+    "category": "Age Restrictions",
+    "explanation": "Standard compliance with COPPA.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We may suspend your account if you violate these Terms of Service.",
+    "risk": "safe",
+    "category": "Termination",
+    "explanation": "Standard enforcement of terms.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "You are responsible for keeping your password secure.",
+    "risk": "safe",
+    "category": "User Responsibilities",
+    "explanation": "Standard user security responsibility.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may share your anonymized usage data with our analytics partners.",
+    "risk": "watch",
+    "category": "Data Sharing",
+    "explanation": "Data is anonymized, but still shared with third parties for analytics.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We use cookies and similar technologies to track your activity on our website.",
+    "risk": "watch",
+    "category": "Tracking",
+    "explanation": "Standard tracking, but merits awareness of how activity is monitored.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "Our service may contain links to third-party websites not controlled by us.",
+    "risk": "watch",
+    "category": "Third Parties",
+    "explanation": "Standard disclaimer, reminding you that other sites have their own rules.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may contact you with promotional offers from our affiliates.",
+    "risk": "watch",
+    "category": "Communication",
+    "explanation": "Allows affiliate marketing, which may result in more emails.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We retain your data for as long as your account is active or as needed to provide you services.",
+    "risk": "watch",
+    "category": "Data Retention",
+    "explanation": "Data is kept indefinitely while the account is open.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You grant us a license to use your uploaded content to operate and improve our services.",
+    "risk": "watch",
+    "category": "IP Rights",
+    "explanation": "Standard operating license, but gives the platform broad rights to use your content.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may collect information about your device, including hardware model and OS.",
+    "risk": "watch",
+    "category": "Data Collection",
+    "explanation": "Collects detailed device profiling data.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "Our services are provided 'as is' without any warranties.",
+    "risk": "watch",
+    "category": "Liability",
+    "explanation": "Standard disclaimer limiting their legal liability for issues.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may process your data on servers located outside your home country.",
+    "risk": "watch",
+    "category": "Data Transfer",
+    "explanation": "Data may be subject to different privacy laws internationally.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may update these terms occasionally, and your continued use implies consent.",
+    "risk": "watch",
+    "category": "Updates",
+    "explanation": "Silent updates without active confirmation.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "If our company is acquired, your data will be transferred to the new owners.",
+    "risk": "watch",
+    "category": "Business Transfer",
+    "explanation": "Your data changes hands if the company is sold.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may use your personal information to personalize the advertising you see.",
+    "risk": "watch",
+    "category": "Targeted Ads",
+    "explanation": "Uses your data for targeted advertising profiles.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may sell your personal data to third-party marketing partners.",
+    "risk": "danger",
+    "category": "Data Selling",
+    "explanation": "Explicitly monetizes your personal data by selling it to third parties.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You waive your right to participate in a class action lawsuit against us.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Severely limits your legal recourse by preventing collective action.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "All disputes must be resolved through binding arbitration.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Forces you out of public courts into private arbitration.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We reserve the right to change these terms at any time without prior notice.",
+    "risk": "danger",
+    "category": "Updates",
+    "explanation": "Allows them to change the rules at any time without telling you.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and distribute your content.",
+    "risk": "danger",
+    "category": "IP Rights",
+    "explanation": "You permanently give up essentially all rights to your intellectual property.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may terminate your account at any time, for any reason, without notice or liability.",
+    "risk": "danger",
+    "category": "Termination",
+    "explanation": "Extremely broad termination rights with no protection for the user.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We collect your precise geolocation data continuously in the background.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Highly invasive tracking of your physical location at all times.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We are not liable for any damages, even if we were negligent or aware of the possibility.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Attempts to completely absolve the company of all responsibility, even for negligence.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may read your private messages to improve our advertising algorithms.",
+    "risk": "danger",
+    "category": "Privacy Violation",
+    "explanation": "Severe violation of communication privacy for commercial gain.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You agree to indemnify and hold us harmless from any claims arising from your use of the service.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Shifts all legal and financial burden onto the user, even for the platform's failures.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We retain the right to collect data from your microphone at any time.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Extremely invasive surveillance of your offline environment.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "By using our service, you consent to us sharing your complete browsing history with our affiliates.",
+    "risk": "danger",
+    "category": "Data Sharing",
+    "explanation": "Massive overcollection and sharing of sensitive web activity.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We collect your email address when you create an account to provide you with our services.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard collection of necessary contact information for account creation.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "You can delete your account and all associated data at any time through your account settings.",
+    "risk": "safe",
+    "category": "Data Rights",
+    "explanation": "Gives the user full control to delete their data.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We use industry-standard encryption to protect your personal information during transmission.",
+    "risk": "safe",
+    "category": "Security",
+    "explanation": "Standard security practice to protect user data.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We do not sell your personal information to third parties.",
+    "risk": "safe",
+    "category": "Data Sharing",
+    "explanation": "Explicitly protects user data from being sold.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "You retain all ownership rights to the content you upload to our platform.",
+    "risk": "safe",
+    "category": "IP Rights",
+    "explanation": "Ensures the user keeps ownership of their own content.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We will notify you at least 30 days in advance of any material changes to these terms.",
+    "risk": "safe",
+    "category": "Updates",
+    "explanation": "Provides reasonable notice before changing the rules.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You may opt out of receiving promotional emails by clicking the unsubscribe link in any email.",
+    "risk": "safe",
+    "category": "Communication",
+    "explanation": "Standard opt-out mechanism for marketing.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "This agreement is governed by the laws of the State of California.",
+    "risk": "safe",
+    "category": "Dispute Resolution",
+    "explanation": "Standard choice of law provision.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We log your IP address to prevent fraud and abuse on our platform.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard security practice with a clear, legitimate purpose.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "If you are under 13, you may not use our services.",
+    "risk": "safe",
+    "category": "Age Restrictions",
+    "explanation": "Standard compliance with COPPA.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may suspend your account if you violate these Terms of Service.",
+    "risk": "safe",
+    "category": "Termination",
+    "explanation": "Standard enforcement of terms.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "You are responsible for keeping your password secure.",
+    "risk": "safe",
+    "category": "User Responsibilities",
+    "explanation": "Standard user security responsibility.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We may share your anonymized usage data with our analytics partners.",
+    "risk": "watch",
+    "category": "Data Sharing",
+    "explanation": "Data is anonymized, but still shared with third parties for analytics.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We use cookies and similar technologies to track your activity on our website.",
+    "risk": "watch",
+    "category": "Tracking",
+    "explanation": "Standard tracking, but merits awareness of how activity is monitored.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "Our service may contain links to third-party websites not controlled by us.",
+    "risk": "watch",
+    "category": "Third Parties",
+    "explanation": "Standard disclaimer, reminding you that other sites have their own rules.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may contact you with promotional offers from our affiliates.",
+    "risk": "watch",
+    "category": "Communication",
+    "explanation": "Allows affiliate marketing, which may result in more emails.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We retain your data for as long as your account is active or as needed to provide you services.",
+    "risk": "watch",
+    "category": "Data Retention",
+    "explanation": "Data is kept indefinitely while the account is open.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "You grant us a license to use your uploaded content to operate and improve our services.",
+    "risk": "watch",
+    "category": "IP Rights",
+    "explanation": "Standard operating license, but gives the platform broad rights to use your content.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may collect information about your device, including hardware model and OS.",
+    "risk": "watch",
+    "category": "Data Collection",
+    "explanation": "Collects detailed device profiling data.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "Our services are provided 'as is' without any warranties.",
+    "risk": "watch",
+    "category": "Liability",
+    "explanation": "Standard disclaimer limiting their legal liability for issues.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may process your data on servers located outside your home country.",
+    "risk": "watch",
+    "category": "Data Transfer",
+    "explanation": "Data may be subject to different privacy laws internationally.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We may update these terms occasionally, and your continued use implies consent.",
+    "risk": "watch",
+    "category": "Updates",
+    "explanation": "Silent updates without active confirmation.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "If our company is acquired, your data will be transferred to the new owners.",
+    "risk": "watch",
+    "category": "Business Transfer",
+    "explanation": "Your data changes hands if the company is sold.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may use your personal information to personalize the advertising you see.",
+    "risk": "watch",
+    "category": "Targeted Ads",
+    "explanation": "Uses your data for targeted advertising profiles.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may sell your personal data to third-party marketing partners.",
+    "risk": "danger",
+    "category": "Data Selling",
+    "explanation": "Explicitly monetizes your personal data by selling it to third parties.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "You waive your right to participate in a class action lawsuit against us.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Severely limits your legal recourse by preventing collective action.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "All disputes must be resolved through binding arbitration.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Forces you out of public courts into private arbitration.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We reserve the right to change these terms at any time without prior notice.",
+    "risk": "danger",
+    "category": "Updates",
+    "explanation": "Allows them to change the rules at any time without telling you.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "You grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and distribute your content.",
+    "risk": "danger",
+    "category": "IP Rights",
+    "explanation": "You permanently give up essentially all rights to your intellectual property.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may terminate your account at any time, for any reason, without notice or liability.",
+    "risk": "danger",
+    "category": "Termination",
+    "explanation": "Extremely broad termination rights with no protection for the user.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We collect your precise geolocation data continuously in the background.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Highly invasive tracking of your physical location at all times.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We are not liable for any damages, even if we were negligent or aware of the possibility.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Attempts to completely absolve the company of all responsibility, even for negligence.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may read your private messages to improve our advertising algorithms.",
+    "risk": "danger",
+    "category": "Privacy Violation",
+    "explanation": "Severe violation of communication privacy for commercial gain.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "You agree to indemnify and hold us harmless from any claims arising from your use of the service.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Shifts all legal and financial burden onto the user, even for the platform's failures.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We retain the right to collect data from your microphone at any time.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Extremely invasive surveillance of your offline environment.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "By using our service, you consent to us sharing your complete browsing history with our affiliates.",
+    "risk": "danger",
+    "category": "Data Sharing",
+    "explanation": "Massive overcollection and sharing of sensitive web activity.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "We collect your email address when you create an account to provide you with our services.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard collection of necessary contact information for account creation.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "You can delete your account and all associated data at any time through your account settings.",
+    "risk": "safe",
+    "category": "Data Rights",
+    "explanation": "Gives the user full control to delete their data.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We use industry-standard encryption to protect your personal information during transmission.",
+    "risk": "safe",
+    "category": "Security",
+    "explanation": "Standard security practice to protect user data.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We do not sell your personal information to third parties.",
+    "risk": "safe",
+    "category": "Data Sharing",
+    "explanation": "Explicitly protects user data from being sold.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You retain all ownership rights to the content you upload to our platform.",
+    "risk": "safe",
+    "category": "IP Rights",
+    "explanation": "Ensures the user keeps ownership of their own content.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We will notify you at least 30 days in advance of any material changes to these terms.",
+    "risk": "safe",
+    "category": "Updates",
+    "explanation": "Provides reasonable notice before changing the rules.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You may opt out of receiving promotional emails by clicking the unsubscribe link in any email.",
+    "risk": "safe",
+    "category": "Communication",
+    "explanation": "Standard opt-out mechanism for marketing.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "This agreement is governed by the laws of the State of California.",
+    "risk": "safe",
+    "category": "Dispute Resolution",
+    "explanation": "Standard choice of law provision.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We log your IP address to prevent fraud and abuse on our platform.",
+    "risk": "safe",
+    "category": "Data Collection",
+    "explanation": "Standard security practice with a clear, legitimate purpose.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "If you are under 13, you may not use our services.",
+    "risk": "safe",
+    "category": "Age Restrictions",
+    "explanation": "Standard compliance with COPPA.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may suspend your account if you violate these Terms of Service.",
+    "risk": "safe",
+    "category": "Termination",
+    "explanation": "Standard enforcement of terms.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "You are responsible for keeping your password secure.",
+    "risk": "safe",
+    "category": "User Responsibilities",
+    "explanation": "Standard user security responsibility.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may share your anonymized usage data with our analytics partners.",
+    "risk": "watch",
+    "category": "Data Sharing",
+    "explanation": "Data is anonymized, but still shared with third parties for analytics.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We use cookies and similar technologies to track your activity on our website.",
+    "risk": "watch",
+    "category": "Tracking",
+    "explanation": "Standard tracking, but merits awareness of how activity is monitored.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "Our service may contain links to third-party websites not controlled by us.",
+    "risk": "watch",
+    "category": "Third Parties",
+    "explanation": "Standard disclaimer, reminding you that other sites have their own rules.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may contact you with promotional offers from our affiliates.",
+    "risk": "watch",
+    "category": "Communication",
+    "explanation": "Allows affiliate marketing, which may result in more emails.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We retain your data for as long as your account is active or as needed to provide you services.",
+    "risk": "watch",
+    "category": "Data Retention",
+    "explanation": "Data is kept indefinitely while the account is open.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "You grant us a license to use your uploaded content to operate and improve our services.",
+    "risk": "watch",
+    "category": "IP Rights",
+    "explanation": "Standard operating license, but gives the platform broad rights to use your content.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We may collect information about your device, including hardware model and OS.",
+    "risk": "watch",
+    "category": "Data Collection",
+    "explanation": "Collects detailed device profiling data.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "Our services are provided 'as is' without any warranties.",
+    "risk": "watch",
+    "category": "Liability",
+    "explanation": "Standard disclaimer limiting their legal liability for issues.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "We may process your data on servers located outside your home country.",
+    "risk": "watch",
+    "category": "Data Transfer",
+    "explanation": "Data may be subject to different privacy laws internationally.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We may update these terms occasionally, and your continued use implies consent.",
+    "risk": "watch",
+    "category": "Updates",
+    "explanation": "Silent updates without active confirmation.",
+    "source": "Spotify ToS"
+  },
+  {
+    "text": "If our company is acquired, your data will be transferred to the new owners.",
+    "risk": "watch",
+    "category": "Business Transfer",
+    "explanation": "Your data changes hands if the company is sold.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "We may use your personal information to personalize the advertising you see.",
+    "risk": "watch",
+    "category": "Targeted Ads",
+    "explanation": "Uses your data for targeted advertising profiles.",
+    "source": "TikTok Privacy Policy"
+  },
+  {
+    "text": "We may sell your personal data to third-party marketing partners.",
+    "risk": "danger",
+    "category": "Data Selling",
+    "explanation": "Explicitly monetizes your personal data by selling it to third parties.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You waive your right to participate in a class action lawsuit against us.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Severely limits your legal recourse by preventing collective action.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "All disputes must be resolved through binding arbitration.",
+    "risk": "danger",
+    "category": "Dispute Resolution",
+    "explanation": "Forces you out of public courts into private arbitration.",
+    "source": "Twitter ToS"
+  },
+  {
+    "text": "We reserve the right to change these terms at any time without prior notice.",
+    "risk": "danger",
+    "category": "Updates",
+    "explanation": "Allows them to change the rules at any time without telling you.",
+    "source": "Apple Privacy Policy"
+  },
+  {
+    "text": "You grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and distribute your content.",
+    "risk": "danger",
+    "category": "IP Rights",
+    "explanation": "You permanently give up essentially all rights to your intellectual property.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We may terminate your account at any time, for any reason, without notice or liability.",
+    "risk": "danger",
+    "category": "Termination",
+    "explanation": "Extremely broad termination rights with no protection for the user.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We collect your precise geolocation data continuously in the background.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Highly invasive tracking of your physical location at all times.",
+    "source": "Netflix Terms"
+  },
+  {
+    "text": "We are not liable for any damages, even if we were negligent or aware of the possibility.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Attempts to completely absolve the company of all responsibility, even for negligence.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "We may read your private messages to improve our advertising algorithms.",
+    "risk": "danger",
+    "category": "Privacy Violation",
+    "explanation": "Severe violation of communication privacy for commercial gain.",
+    "source": "Meta PP"
+  },
+  {
+    "text": "You agree to indemnify and hold us harmless from any claims arising from your use of the service.",
+    "risk": "danger",
+    "category": "Liability",
+    "explanation": "Shifts all legal and financial burden onto the user, even for the platform's failures.",
+    "source": "Google ToS"
+  },
+  {
+    "text": "We retain the right to collect data from your microphone at any time.",
+    "risk": "danger",
+    "category": "Data Collection",
+    "explanation": "Extremely invasive surveillance of your offline environment.",
+    "source": "Amazon PP"
+  },
+  {
+    "text": "By using our service, you consent to us sharing your complete browsing history with our affiliates.",
+    "risk": "danger",
+    "category": "Data Sharing",
+    "explanation": "Massive overcollection and sharing of sensitive web activity.",
+    "source": "TikTok Privacy Policy"
+  }
+]

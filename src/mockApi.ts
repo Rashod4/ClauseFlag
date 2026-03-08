@@ -1,5 +1,3 @@
-import {GoogleGenerativeAI} from '@google/generative-ai';
-
 export interface Clause {
   id: string;
   text: string;
@@ -12,122 +10,65 @@ export interface Clause {
 
 export interface AnalysisResponse {
   id: string;
-  status: 'complete';
+  status: 'processing' | 'complete' | 'failed';
   clause_count: number;
   risk_summary: {
     safe: number;
     watch: number;
     danger: number;
   };
-  clauses: Clause[];
+  clauses?: Clause[];
 }
 
-const apiKey = process.env.GEMINI_API_KEY as string | undefined;
-
-if (!apiKey) {
-  // Surface clearly during development if the key is missing.
-  // eslint-disable-next-line no-console
-  console.error('GEMINI_API_KEY is not set. Add it to .env.local.');
-}
-
-const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
-
-function buildPrompt(rawText: string): string {
-  return `
-You are a legal and privacy policy clause risk analyzer.
-
-Given the following policy or terms-of-service text, identify the most important clauses and
-classify each as one of: "safe", "watch", or "danger". Focus on things like dispute resolution,
-data collection/processing, termination, unilateral changes, IP, and other rights or limitations.
-
-Return ONLY valid JSON matching this exact TypeScript type (no extra keys, no comments, no prose):
-
-type Risk = "safe" | "watch" | "danger";
-
-interface Clause {
-  id: string;
-  text: string;
-  risk: Risk;
-  confidence: number;        // 0–1
-  anomaly_score: number;     // 0–1, how unusual or unexpected the clause is
-  category: string;          // short label like "Data Collection", "Termination"
-  explanation: string;       // 1–2 sentence plain-language explanation
-}
-
-interface AnalysisResponse {
-  id: string;
-  status: "complete";
-  clause_count: number;
-  risk_summary: {
-    safe: number;
-    watch: number;
-    danger: number;
-  };
-  clauses: Clause[];
-}
-
-Now analyze this text:
----
-${rawText}
----
-
-Remember: respond with JSON ONLY that matches AnalysisResponse exactly.`;
-}
-
-function extractJson(text: string): string {
-  const trimmed = text.trim();
-
-  // Prefer content inside fenced code blocks, especially ```json.
-  const fenceMatch = trimmed.match(/```(?:json)?\s*([\s\S]*?)```/i);
-  if (fenceMatch && fenceMatch[1]) {
-    return fenceMatch[1].trim();
-  }
-
-  // Fallback: try to pull out the first JSON object, even if mixed with prose.
-  const objectMatch = trimmed.match(/\{[\s\S]*\}/);
-  if (objectMatch && objectMatch[0]) {
-    return objectMatch[0];
-  }
-
-  // Last resort: assume the whole thing is JSON (may still fail to parse).
-  return trimmed;
-}
-
+// Function to poll the backend until the analysis is complete
 export async function analyzeText(rawText: string): Promise<AnalysisResponse> {
-  if (!genAI) {
-    throw new Error('GEMINI_API_KEY is not configured.');
-  }
-
-  const model = genAI.getGenerativeModel({
-    // Use a broadly available text model for this deprecated SDK.
-    model: 'gemini-2.5-flash',
+  // 1. Send text to backend to start analysis
+  const startRes = await fetch('/api/analyze', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ text: rawText }),
   });
 
-//   client = genai.Client(http_options={'api_version': 'v1alpha'})
-
-//   response = client.models.generate_content(
-//       model='gemini-2.5-flash',
-//       contents="Explain how AI works",
-//   )
-
-
-  const prompt = buildPrompt(rawText);
-  const result = await model.generateContent(prompt);
-  const raw = result.response.text();
-  const json = extractJson(raw);
-
-  let parsed: AnalysisResponse;
-  try {
-    parsed = JSON.parse(json) as AnalysisResponse;
-  } catch (err) {
-    // eslint-disable-next-line no-console
-    console.error('Failed to parse Gemini JSON response:', {raw, json, err});
-    throw new Error('Gemini returned an unparseable response. Try again or simplify the input.');
+  if (!startRes.ok) {
+    throw new Error(`Failed to start analysis: ${startRes.statusText}`);
   }
 
-  if (!parsed || parsed.status !== 'complete' || !Array.isArray(parsed.clauses)) {
-    throw new Error('Unexpected response shape from Gemini.');
+  const { id } = await startRes.json();
+
+  // 2. Poll the backend until the analysis is complete
+  let attempts = 0;
+  const maxAttempts = 600; // Up to 10 minutes polling for the first model download
+
+  while (attempts < maxAttempts) {
+    const statusRes = await fetch(`/api/analyses/${id}`);
+    if (!statusRes.ok) {
+      throw new Error(`Failed to check status: ${statusRes.statusText}`);
+    }
+
+    const analysis: AnalysisResponse = await statusRes.json();
+
+    if (analysis.status === 'failed') {
+      throw new Error('Analysis failed on the server.');
+    }
+
+    if (analysis.status === 'complete') {
+      // 3. Fetch the finished clauses
+      const clausesRes = await fetch(`/api/analyses/${id}/clauses`);
+      if (!clausesRes.ok) {
+        throw new Error('Failed to fetch clauses.');
+      }
+
+      const { clauses } = await clausesRes.json();
+      analysis.clauses = clauses;
+      return analysis;
+    }
+
+    // Wait 1 second before polling again
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    attempts++;
   }
 
-  return parsed;
+  throw new Error('Analysis timed out. Please try again later.');
 }

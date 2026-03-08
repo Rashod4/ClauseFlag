@@ -2,3 +2,19 @@ node_modules
 .env
 .env.local
 .env.*.local
+
+# Databases
+*.db
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# JS/Vite Output
+dist/
+dist-ssr/
+
+# OS
+.DS_Store
