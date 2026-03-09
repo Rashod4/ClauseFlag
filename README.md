@@ -1,7 +1,3 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
 # ClauseFlag
 
 ClauseFlag is a software solution that allows users to paste Terms of Service and Privacy Policy text, and automatically extracts and classifies clauses by risk level (*safe / watch / danger*). It highlights anomalous clauses compared to a corpus baseline and provides plain-language explanations for why each clause is concerning.
@@ -15,7 +11,15 @@ ClauseFlag is a software solution that allows users to paste Terms of Service an
 
 ## Running Locally
 
-Our application is split into a **Python Backend** and a **React Frontend**. You need to run both concurrently in separate terminal windows.
+Our application is split into a **Python Backend** and a **React Frontend**. You need to run both concurrently.
+
+### Quick Start
+After installing dependencies (see below), run everything with a single command:
+```bash
+npm run dev:all
+```
+
+---
 
 ### 1. Start the Python Backend
 The backend handles the ML classification. The first time you run analysis, it will download the Hugging Face models (~1.6GB) into memory.
