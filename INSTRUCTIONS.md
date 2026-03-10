@@ -21,7 +21,7 @@ The app is a **two-process** system:
 │   Port 5173              │──────▶│        Port 8000                     │
 │                          │ /api  │                                      │
 │  src/App.tsx             │ proxy │  backend/main.py          (routes)   │
-│  src/mockApi.ts          │       │  backend/classifier.py    (ML)       │
+│  src/apiClient.ts        │       │  backend/classifier.py    (ML)       │
 │                          │       │  backend/anomaly.py       (ML)       │
 │                          │       │  backend/explainer.py     (rules)    │
 └──────────────────────────┘       └──────────────────────────────────────┘
@@ -54,7 +54,7 @@ ClauseFlag/
 │   └── training_dataset.csv    # CSV version of the same dataset
 ├── src/                        # React frontend source
 │   ├── App.tsx                 # Main UI — input form, clause cards, risk filters
-│   ├── mockApi.ts              # API client — POST /api/analyze, poll status, fetch clauses
+│   ├── apiClient.ts            # API client — POST /api/analyze, poll status, fetch clauses
 │   ├── main.tsx                # React entry point
 │   └── index.css               # Global styles
 ├── server.ts                   # UNUSED — alternative Express/Gemini backend (not active)
@@ -188,7 +188,7 @@ Fetch analyzed clauses (only returns data when status is `"complete"`).
 ## 8. Frontend–Backend Data Flow
 
 1. User pastes text and clicks **"Analyze clauses"**.
-2. `src/mockApi.ts` → `POST /api/analyze` with the raw text.
+2. `src/apiClient.ts` → `POST /api/analyze` with the raw text.
 3. Backend creates a DB record with `status = "processing"` and kicks off a background job.
 4. Frontend polls `GET /api/analyses/{id}` every 1 second (up to 10 minutes).
 5. Background job in `backend/main.py`:
@@ -301,7 +301,7 @@ python generate_data.py
 This regenerates `data/training_dataset.json` and `data/training_dataset.csv`.
 
 ### Adding new frontend components
-All React components are in `src/App.tsx`. The app uses Tailwind CSS 4 utility classes. Key types are defined in `src/mockApi.ts` (`Clause`, `AnalysisResponse`).
+All React components are in `src/App.tsx`. The app uses Tailwind CSS 4 utility classes. Key types are defined in `src/apiClient.ts` (`Clause`, `AnalysisResponse`).
 
 ---
 

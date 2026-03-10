@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import type { AnalysisResponse, Clause } from './mockApi';
-import { analyzeText } from './mockApi';
+import type { AnalysisResponse, Clause } from './apiClient';
+import { analyzeText } from './apiClient';
 
 type RiskFilter = 'all' | 'safe' | 'watch' | 'danger';
 
