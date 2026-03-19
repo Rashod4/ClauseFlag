@@ -13,47 +13,40 @@ ClauseFlag is a software solution that allows users to paste Terms of Service an
 
 Our application is split into a **Python Backend** and a **React Frontend**. You need to run both concurrently.
 
+**Prerequisites:** Python 3.9+, Node.js
+
 ### Quick Start
-After installing dependencies (see below), run everything with a single command:
 ```bash
-npm run dev:all
+npm run setup      # installs all dependencies (npm, pip, Playwright browser)
+npm run dev:all    # starts both frontend and backend concurrently
 ```
+The first analysis will download Hugging Face models (~1.6GB) into memory.
 
 ---
 
-### 1. Start the Python Backend
-The backend handles the ML classification. The first time you run analysis, it will download the Hugging Face models (~1.6GB) into memory.
+### Manual Setup (if you prefer step-by-step)
 
-**Prerequisites:** Python 3.9+
+#### 1. Python Backend
 
-1. Navigate to the backend directory:
+1. Install dependencies:
    ```bash
    cd backend
-   ```
-2. Install the required dependencies:
-   ```bash
    pip install -r requirements.txt
    python -m playwright install chromium
    ```
-3. Start the FastAPI server (runs on `http://127.0.0.1:8000`):
+2. Start the FastAPI server (runs on `http://127.0.0.1:8000`):
    ```bash
    uvicorn main:app --port 8000 --reload
    ```
 
-### 2. Start the React Frontend
+#### 2. React Frontend
 
-**Prerequisites:** Node.js
-
-1. Open a **new** terminal window and keep it at the `ClauseFlag` root directory.
-2. Install dependencies:
+1. From the project root, install and start:
    ```bash
    npm install
-   ```
-3. Run the development server:
-   ```bash
    npm run dev
    ```
-4. Click the link provided in the terminal (usually `http://localhost:5173`) to open the app in your browser!
+2. Open `http://localhost:5173` in your browser.
 
 ### 3. Generate Training Dataset (Optional)
 If you need to regenerate the SQLite database seed data or extend the local training CSV/JSON files:
