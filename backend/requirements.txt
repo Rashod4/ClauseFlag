@@ -4,3 +4,8 @@ pydantic
 transformers
 torch
 sentence-transformers
+requests
+beautifulsoup4
+lxml
+httpx
+pytest

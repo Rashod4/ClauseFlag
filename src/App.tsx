@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { AnalysisResponse, Clause } from './apiClient';
-import { analyzeText } from './apiClient';
+import { analyze } from './apiClient';
 
+type InputMode = 'text' | 'url';
 type RiskFilter = 'all' | 'safe' | 'watch' | 'danger';
 
 const riskColors: Record<RiskFilter, string> = {
@@ -18,35 +19,46 @@ const riskBorderColors: Record<Clause['risk'], string> = {
 };
 
 export default function App() {
-  const [input, setInput] = useState('');
+  const [mode, setMode] = useState<InputMode>('text');
+  const [textInput, setTextInput] = useState('');
+  const [urlInput, setUrlInput] = useState('');
   const [filter, setFilter] = useState<RiskFilter>('all');
   const [result, setResult] = useState<AnalysisResponse | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [elapsed, setElapsed] = useState(0);
+
+  useEffect(() => {
+    if (!isAnalyzing) return;
+    setElapsed(0);
+    const t0 = Date.now();
+    const id = setInterval(() => {
+      setElapsed(Math.floor((Date.now() - t0) / 1000));
+    }, 1000);
+    return () => clearInterval(id);
+  }, [isAnalyzing]);
 
   const handleAnalyze = async () => {
-    if (!input.trim()) {
-      setError('Paste a terms of service or privacy policy first.');
+    const value = mode === 'text' ? textInput.trim() : urlInput.trim();
+    if (!value) {
+      setError(
+        mode === 'text'
+          ? 'Paste a terms of service or privacy policy first.'
+          : 'Enter a URL to a terms of service or privacy policy.',
+      );
       return;
     }
     setError(null);
     setIsAnalyzing(true);
     try {
-      const data = await analyzeText(input);
+      const request = mode === 'text' ? { text: value } : { url: value };
+      const data = await analyze(request);
       setResult(data);
     } catch (e) {
       console.error(e);
       const message =
         e instanceof Error ? e.message : 'Unknown error during analysis.';
-      if (message.includes('GEMINI_API_KEY')) {
-        setError(
-          'Your Gemini API key is not configured correctly. Check .env.local and restart the dev server.',
-        );
-      } else {
-        setError(
-          `Something went wrong while analyzing: ${message} (see console for details).`,
-        );
-      }
+      setError(message);
     } finally {
       setIsAnalyzing(false);
     }
@@ -73,29 +85,55 @@ export default function App() {
             </p>
           </header>
 
-          <div className="space-y-2">
-            <label
-              htmlFor="tos-input"
-              className="text-sm font-medium text-slate-200"
-            >
-              Contract or policy text
-            </label>
-            <textarea
-              id="tos-input"
-              className="h-64 w-full resize-none rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-50 shadow-sm outline-none placeholder:text-slate-500 focus:border-sky-400 focus:ring-1 focus:ring-sky-400"
-              placeholder="Paste the full text of a terms of service or privacy policy here..."
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-            />
+          <div className="space-y-3">
+            <div className="inline-flex rounded-lg bg-slate-900 p-1 text-sm">
+              {(['text', 'url'] as InputMode[]).map((tab) => (
+                <button
+                  key={tab}
+                  type="button"
+                  onClick={() => { setMode(tab); setError(null); }}
+                  className={[
+                    'rounded-md px-4 py-1.5 font-medium transition',
+                    tab === mode
+                      ? 'bg-sky-500 text-slate-950 shadow-sm'
+                      : 'text-slate-400 hover:text-slate-200',
+                  ].join(' ')}
+                >
+                  {tab === 'text' ? 'Paste Text' : 'URL'}
+                </button>
+              ))}
+            </div>
+
+            {mode === 'text' ? (
+              <textarea
+                id="tos-input"
+                className="h-64 w-full resize-none rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-50 shadow-sm outline-none placeholder:text-slate-500 focus:border-sky-400 focus:ring-1 focus:ring-sky-400"
+                placeholder="Paste the full text of a terms of service or privacy policy here..."
+                value={textInput}
+                onChange={(e) => setTextInput(e.target.value)}
+              />
+            ) : (
+              <input
+                type="url"
+                id="url-input"
+                className="w-full rounded-md border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-50 shadow-sm outline-none placeholder:text-slate-500 focus:border-sky-400 focus:ring-1 focus:ring-sky-400"
+                placeholder="https://example.com/privacy-policy"
+                value={urlInput}
+                onChange={(e) => setUrlInput(e.target.value)}
+              />
+            )}
           </div>
 
           {error && (
-            <p className="text-sm font-medium text-rose-400" role="alert">
+            <div
+              className="rounded-md border border-rose-500/30 bg-rose-950/40 px-4 py-3 text-sm text-rose-200"
+              role="alert"
+            >
               {error}
-            </p>
+            </div>
           )}
 
-          <div className="flex items-center justify-between gap-3">
+          <div className="space-y-3">
             <button
               type="button"
               onClick={handleAnalyze}
@@ -104,6 +142,39 @@ export default function App() {
             >
               {isAnalyzing ? 'Analyzing…' : 'Analyze clauses'}
             </button>
+
+            {isAnalyzing && (
+              <div className="flex items-center gap-3 rounded-md border border-sky-500/20 bg-sky-950/30 px-4 py-3">
+                <svg
+                  className="h-4 w-4 shrink-0 animate-spin text-sky-400"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  />
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                  />
+                </svg>
+                <div className="text-sm">
+                  <p className="text-sky-200">
+                    Scraping and analyzing… this may take a minute for the first
+                    run.
+                  </p>
+                  <p className="tabular-nums text-xs text-sky-300/60">
+                    {elapsed}s elapsed
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         </section>
 

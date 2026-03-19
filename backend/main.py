@@ -53,9 +53,13 @@ def init_db():
 
 init_db()
 
+MIN_TEXT_LENGTH = 50
+MAX_TEXT_LENGTH = 100_000
+
+
 class AnalyzeRequest(BaseModel):
     url: Optional[str] = None
-    text: str
+    text: Optional[str] = None
 
 class ClauseResponse(BaseModel):
     id: str
@@ -151,21 +155,67 @@ def process_analysis_job(analysis_id: str, text: str):
         conn.commit()
         conn.close()
 
+def _find_cached_analysis(url: str) -> Optional[dict]:
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    c = conn.cursor()
+    row = c.execute("""
+        SELECT id, status FROM analyses
+        WHERE url = ? AND status = 'complete'
+          AND created_at > datetime('now', '-24 hours')
+        ORDER BY created_at DESC LIMIT 1
+    """, (url,)).fetchone()
+    conn.close()
+    if row:
+        return {"id": row["id"], "status": row["status"]}
+    return None
+
+
+def _validate_text_length(text: str) -> None:
+    if len(text) < MIN_TEXT_LENGTH:
+        raise HTTPException(status_code=400, detail="Text too short to analyze")
+    if len(text) > MAX_TEXT_LENGTH:
+        raise HTTPException(status_code=400, detail="Text exceeds maximum length")
+
+
 @app.post("/api/analyze")
 async def create_analysis(request: AnalyzeRequest, background_tasks: BackgroundTasks):
+    from scraper import scrape_url
+
+    text = request.text
+    url = request.url
+
+    if not url and not text:
+        raise HTTPException(
+            status_code=422,
+            detail="Either 'url' or 'text' must be provided",
+        )
+
+    if url and not text:
+        cached = _find_cached_analysis(url)
+        if cached:
+            return cached
+        try:
+            text = scrape_url(url)
+        except ValueError as exc:
+            raise HTTPException(status_code=400, detail=str(exc))
+        except RuntimeError as exc:
+            raise HTTPException(status_code=400, detail=str(exc))
+
+    _validate_text_length(text)
+
     analysis_id = str(uuid.uuid4())
-    
+
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
     c.execute("""
         INSERT INTO analyses (id, url, raw_text, status, clause_count, risk_summary)
         VALUES (?, ?, ?, ?, ?, ?)
-    """, (analysis_id, request.url, request.text, 'processing', 0, json.dumps({"safe": 0, "watch": 0, "danger": 0})))
+    """, (analysis_id, url, text, 'processing', 0, json.dumps({"safe": 0, "watch": 0, "danger": 0})))
     conn.commit()
     conn.close()
 
-    # Process in background since ML models can take time
-    background_tasks.add_task(process_analysis_job, analysis_id, request.text)
+    background_tasks.add_task(process_analysis_job, analysis_id, text)
 
     return {"id": analysis_id, "status": "processing"}
 
@@ -182,9 +232,12 @@ async def get_analysis(analysis_id: str):
         
     return {
         "id": row["id"],
+        "url": row["url"],
         "status": row["status"],
         "clause_count": row["clause_count"],
-        "risk_summary": json.loads(row["risk_summary"])
+        "risk_summary": json.loads(row["risk_summary"]),
+        "created_at": row["created_at"],
+        "completed_at": row["completed_at"],
     }
 
 @app.get("/api/analyses/{analysis_id}/clauses")

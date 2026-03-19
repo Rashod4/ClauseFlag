@@ -10,6 +10,7 @@ export interface Clause {
 
 export interface AnalysisResponse {
   id: string;
+  url: string | null;
   status: 'processing' | 'complete' | 'failed';
   clause_count: number;
   risk_summary: {
@@ -17,22 +18,36 @@ export interface AnalysisResponse {
     watch: number;
     danger: number;
   };
+  created_at: string | null;
+  completed_at: string | null;
   clauses?: Clause[];
 }
 
-// Function to poll the backend until the analysis is complete
-export async function analyzeText(rawText: string): Promise<AnalysisResponse> {
-  // 1. Send text to backend to start analysis
+export interface AnalyzeRequest {
+  url?: string;
+  text?: string;
+}
+
+export async function analyze(request: AnalyzeRequest): Promise<AnalysisResponse> {
+  if (!request.url && !request.text) {
+    throw new Error("Either 'url' or 'text' must be provided.");
+  }
+
   const startRes = await fetch('/api/analyze', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ text: rawText }),
+    body: JSON.stringify(request),
   });
 
   if (!startRes.ok) {
-    throw new Error(`Failed to start analysis: ${startRes.statusText}`);
+    let detail = startRes.statusText;
+    try {
+      const body = await startRes.json();
+      if (body.detail) detail = body.detail;
+    } catch { /* use statusText fallback */ }
+    throw new Error(detail);
   }
 
   const { id } = await startRes.json();
@@ -71,4 +86,8 @@ export async function analyzeText(rawText: string): Promise<AnalysisResponse> {
   }
 
   throw new Error('Analysis timed out. Please try again later.');
+}
+
+export async function analyzeText(rawText: string): Promise<AnalysisResponse> {
+  return analyze({ text: rawText });
 }
