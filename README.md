@@ -33,6 +33,7 @@ The backend handles the ML classification. The first time you run analysis, it w
 2. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
+   python -m playwright install chromium
    ```
 3. Start the FastAPI server (runs on `http://127.0.0.1:8000`):
    ```bash
