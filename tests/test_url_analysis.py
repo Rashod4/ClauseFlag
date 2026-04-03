@@ -66,6 +66,10 @@ def test_url_analysis_end_to_end(mock_scrape, client):
         assert clause["risk"] in ("safe", "watch", "danger")
         assert 0 <= clause["confidence"] <= 1
         assert 0 <= clause["anomaly_score"] <= 1
+        exp = clause["explanation"]
+        assert isinstance(exp, dict), "explanation should be a structured object"
+        assert {"summary", "unusual", "risks"} == set(exp.keys())
+        assert len(exp["summary"]) > 0
 
     mock_scrape.assert_called_once_with(unique_url)
 

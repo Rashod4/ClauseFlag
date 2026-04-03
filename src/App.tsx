@@ -1,6 +1,9 @@
-import { useState, useEffect } from 'react';
-import type { AnalysisResponse, Clause } from './apiClient';
-import { analyze } from './apiClient';
+import { useState, useEffect, useCallback } from 'react';
+import { Info, AlertTriangle, ShieldAlert } from 'lucide-react';
+import type { AnalysisResponse, Clause, AuthUser } from './apiClient';
+import { analyze, fetchAnalysis, getStoredUser, clearAuth } from './apiClient';
+import AuthModal from './components/AuthModal';
+import HistoryPanel from './components/HistoryPanel';
 
 type InputMode = 'text' | 'url';
 type RiskFilter = 'all' | 'safe' | 'watch' | 'danger';
@@ -28,6 +31,39 @@ export default function App() {
   const [error, setError] = useState<string | null>(null);
   const [elapsed, setElapsed] = useState(0);
 
+  // Auth state
+  const [user, setUser] = useState<AuthUser | null>(getStoredUser);
+  const [authOpen, setAuthOpen] = useState(false);
+  const [historyKey, setHistoryKey] = useState(0);
+
+  const handleLogout = useCallback(() => {
+    clearAuth();
+    setUser(null);
+  }, []);
+
+  const handleHistorySelect = useCallback(async (analysisId: string) => {
+    setError(null);
+    setIsAnalyzing(true);
+    try {
+      const data = await fetchAnalysis(analysisId);
+      setResult(data);
+      setFilter('all');
+      if (data.url) {
+        setMode('url');
+        setUrlInput(data.url);
+      } else if (data.raw_text) {
+        setMode('text');
+        setTextInput(data.raw_text);
+      }
+    } catch (e) {
+      const message =
+        e instanceof Error ? e.message : 'Failed to load analysis.';
+      setError(message);
+    } finally {
+      setIsAnalyzing(false);
+    }
+  }, []);
+
   useEffect(() => {
     if (!isAnalyzing) return;
     setElapsed(0);
@@ -54,6 +90,7 @@ export default function App() {
       const request = mode === 'text' ? { text: value } : { url: value };
       const data = await analyze(request);
       setResult(data);
+      if (user) setHistoryKey((k) => k + 1);
     } catch (e) {
       console.error(e);
       const message =
@@ -66,32 +103,67 @@ export default function App() {
 
   const filteredClauses =
     result && filter !== 'all'
-      ? result.clauses.filter((c) => c.risk === filter)
+      ? result.clauses!.filter((c) => c.risk === filter)
       : result?.clauses ?? [];
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-8 md:flex-row md:py-12">
-        <section className="md:w-1/2 space-y-4">
-          <header className="space-y-2">
-            <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
-              ClauseFlag
-            </h1>
-            <p className="text-sm text-slate-300 md:text-base">
-              Paste a Terms of Service or privacy policy to flag risky clauses
-              as <span className="font-medium text-emerald-300">Safe</span>,{' '}
-              <span className="font-medium text-amber-300">Watch</span>, or{' '}
-              <span className="font-medium text-rose-300">Danger</span>.
-            </p>
+        {/* ── Left column: input + history ── */}
+        <section className="space-y-4 md:w-1/2">
+          {/* Header row */}
+          <header className="flex items-start justify-between gap-4">
+            <div className="space-y-2">
+              <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
+                ClauseFlag
+              </h1>
+              <p className="text-sm text-slate-300 md:text-base">
+                Paste a Terms of Service or privacy policy to flag risky clauses
+                as{' '}
+                <span className="font-medium text-emerald-300">Safe</span>,{' '}
+                <span className="font-medium text-amber-300">Watch</span>, or{' '}
+                <span className="font-medium text-rose-300">Danger</span>.
+              </p>
+            </div>
+
+            {/* Auth controls */}
+            <div className="shrink-0 pt-1">
+              {user ? (
+                <div className="flex items-center gap-2">
+                  <span className="rounded-full bg-sky-500/10 px-3 py-1 text-xs font-medium text-sky-300 ring-1 ring-sky-500/30">
+                    {user.username}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={handleLogout}
+                    className="rounded-md px-2 py-1 text-xs text-slate-400 transition hover:text-slate-200"
+                  >
+                    Log out
+                  </button>
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setAuthOpen(true)}
+                  className="rounded-md bg-slate-800 px-3 py-1.5 text-xs font-medium text-slate-200 ring-1 ring-slate-700 transition hover:bg-slate-700"
+                >
+                  Log in
+                </button>
+              )}
+            </div>
           </header>
 
+          {/* Input area */}
           <div className="space-y-3">
             <div className="inline-flex rounded-lg bg-slate-900 p-1 text-sm">
               {(['text', 'url'] as InputMode[]).map((tab) => (
                 <button
                   key={tab}
                   type="button"
-                  onClick={() => { setMode(tab); setError(null); }}
+                  onClick={() => {
+                    setMode(tab);
+                    setError(null);
+                  }}
                   className={[
                     'rounded-md px-4 py-1.5 font-medium transition',
                     tab === mode
@@ -176,9 +248,21 @@ export default function App() {
               </div>
             )}
           </div>
+
+          {/* History panel (only when logged in) */}
+          {user && (
+            <div className="pt-2">
+              <HistoryPanel
+                refreshKey={historyKey}
+                onSelect={handleHistorySelect}
+                activeAnalysisId={result?.id}
+              />
+            </div>
+          )}
         </section>
 
-        <section className="md:w-1/2 space-y-4">
+        {/* ── Right column: results ── */}
+        <section className="space-y-4 md:w-1/2">
           <div className="flex items-center justify-between gap-3">
             <h2 className="text-lg font-semibold text-slate-100">
               Analysis results
@@ -246,15 +330,22 @@ export default function App() {
           )}
         </section>
       </div>
+
+      {/* Auth modal */}
+      <AuthModal
+        open={authOpen}
+        onOpenChange={setAuthOpen}
+        onSuccess={(auth) =>
+          setUser({ user_id: auth.user_id, username: auth.username })
+        }
+      />
     </div>
   );
 }
 
-function SummaryPill(props: {
-  label: string;
-  value: number;
-  color: string;
-}) {
+// ── Local presentational components ─────────────────────────────────
+
+function SummaryPill(props: { label: string; value: number; color: string }) {
   const { label, value, color } = props;
   return (
     <div
@@ -271,6 +362,7 @@ function SummaryPill(props: {
 
 function ClauseCard({ clause }: { clause: Clause }) {
   const borderColor = riskBorderColors[clause.risk];
+  const { summary, unusual, risks } = clause.explanation;
 
   return (
     <article
@@ -295,8 +387,38 @@ function ClauseCard({ clause }: { clause: Clause }) {
           </span>
         </div>
       </header>
-      <p className="mb-2 text-sm text-slate-50">{clause.text}</p>
-      <p className="text-xs text-slate-300">{clause.explanation}</p>
+
+      <p className="mb-3 text-sm text-slate-50">{clause.text}</p>
+
+      <div className="space-y-2 border-t border-slate-800 pt-3">
+        <div className="flex gap-2.5 rounded-md bg-sky-950/40 px-3 py-2.5 ring-1 ring-sky-500/20">
+          <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-sky-400" />
+          <div className="text-xs">
+            <p className="font-medium text-sky-300">Layman's Summary</p>
+            <p className="mt-1 leading-relaxed text-slate-300">{summary}</p>
+          </div>
+        </div>
+
+        {unusual && (
+          <div className="flex gap-2.5 rounded-md bg-amber-950/30 px-3 py-2.5 ring-1 ring-amber-500/20">
+            <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-400" />
+            <div className="text-xs">
+              <p className="font-medium text-amber-300">Why this is unusual</p>
+              <p className="mt-1 leading-relaxed text-slate-300">{unusual}</p>
+            </div>
+          </div>
+        )}
+
+        {risks && (
+          <div className="flex gap-2.5 rounded-md bg-rose-950/30 px-3 py-2.5 ring-1 ring-rose-500/20">
+            <ShieldAlert className="mt-0.5 h-3.5 w-3.5 shrink-0 text-rose-400" />
+            <div className="text-xs">
+              <p className="font-medium text-rose-300">Potential Risks</p>
+              <p className="mt-1 leading-relaxed text-slate-300">{risks}</p>
+            </div>
+          </div>
+        )}
+      </div>
     </article>
   );
 }

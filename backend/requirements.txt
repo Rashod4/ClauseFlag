@@ -9,4 +9,6 @@ beautifulsoup4
 lxml
 playwright
 httpx
+PyJWT
+bcrypt
 pytest

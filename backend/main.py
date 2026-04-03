@@ -2,8 +2,12 @@ import os
 import uuid
 import json
 import sqlite3
-from datetime import datetime
-from fastapi import FastAPI, BackgroundTasks, HTTPException
+from datetime import datetime, timedelta
+
+import bcrypt
+import jwt
+
+from fastapi import Depends, FastAPI, BackgroundTasks, Header, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, List
@@ -47,14 +51,128 @@ def init_db():
         explanation TEXT,
         FOREIGN KEY(analysis_id) REFERENCES analyses(id)
       );
+
+      CREATE TABLE IF NOT EXISTS users (
+        id TEXT PRIMARY KEY,
+        username TEXT NOT NULL UNIQUE,
+        password_hash TEXT NOT NULL,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+      );
+
+      CREATE TABLE IF NOT EXISTS history (
+        id TEXT PRIMARY KEY,
+        user_id TEXT NOT NULL,
+        url TEXT,
+        analysis_result TEXT,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY(user_id) REFERENCES users(id)
+      );
     """)
     conn.commit()
     conn.close()
 
 init_db()
 
+
+def _migrate_old_explanations():
+    """Re-generate explanations for clauses still stored as plain strings."""
+    from explainer import get_explainer
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    rows = conn.execute("SELECT id, text, risk, explanation FROM clauses").fetchall()
+    explainer = get_explainer()
+
+    migrated = 0
+    for row in rows:
+        raw = row["explanation"] or ""
+        try:
+            parsed = json.loads(raw)
+            if isinstance(parsed, dict) and "summary" in parsed:
+                continue
+        except (json.JSONDecodeError, TypeError):
+            pass
+
+        exp_res = explainer.generate_explanation(row["text"], row["risk"])
+        conn.execute(
+            "UPDATE clauses SET explanation = ?, category = ? WHERE id = ?",
+            (json.dumps(exp_res["explanation"]), exp_res["category"], row["id"]),
+        )
+        migrated += 1
+
+    if migrated:
+        conn.commit()
+    conn.close()
+
+
+_migrate_old_explanations()
+
+# ── Auth configuration ──────────────────────────────────────────────
+
+JWT_SECRET = os.environ.get("CLAUSEFLAG_JWT_SECRET", "dev-secret-change-in-production!")
+JWT_ALGORITHM = "HS256"
+JWT_EXPIRY_HOURS = 24
+
+
+def hash_password(password: str) -> str:
+    return bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
+
+
+def verify_password(password: str, password_hash: str) -> bool:
+    return bcrypt.checkpw(password.encode(), password_hash.encode())
+
+
+def create_access_token(user_id: str) -> str:
+    payload = {
+        "sub": user_id,
+        "exp": datetime.utcnow() + timedelta(hours=JWT_EXPIRY_HOURS),
+    }
+    return jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)
+
+
+def decode_access_token(token: str) -> Optional[str]:
+    try:
+        payload = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM])
+        return payload.get("sub")
+    except jwt.PyJWTError:
+        return None
+
+
+def get_optional_user_id(
+    authorization: Optional[str] = Header(default=None),
+) -> Optional[str]:
+    """Return the user_id from Bearer token, or None if absent/invalid."""
+    if not authorization or not authorization.startswith("Bearer "):
+        return None
+    return decode_access_token(authorization[7:])
+
+
+def get_required_user_id(
+    authorization: Optional[str] = Header(default=None),
+) -> str:
+    """Return the user_id from Bearer token; raise 401 if missing/invalid."""
+    if not authorization or not authorization.startswith("Bearer "):
+        raise HTTPException(status_code=401, detail="Missing authorization token")
+    user_id = decode_access_token(authorization[7:])
+    if not user_id:
+        raise HTTPException(status_code=401, detail="Invalid or expired token")
+    return user_id
+
+
+# ── Constants & models ──────────────────────────────────────────────
+
 MIN_TEXT_LENGTH = 50
 MAX_TEXT_LENGTH = 100_000
+
+
+class RegisterRequest(BaseModel):
+    username: str
+    password: str
+
+
+class LoginRequest(BaseModel):
+    username: str
+    password: str
 
 
 class AnalyzeRequest(BaseModel):
@@ -82,7 +200,12 @@ def split_into_sentences(text: str) -> List[str]:
     sentences = re.split(r'(?<=[.!?]) +', text)
     return [s.strip() for s in sentences if len(s.strip()) > 5]
 
-def process_analysis_job(analysis_id: str, text: str):
+def process_analysis_job(
+    analysis_id: str,
+    text: str,
+    user_id: Optional[str] = None,
+    url: Optional[str] = None,
+):
     import sqlite3
     from classifier import get_classifier
     from anomaly import get_anomaly_detector
@@ -99,15 +222,12 @@ def process_analysis_job(analysis_id: str, text: str):
         clauses_data = []
 
         for i, sentence in enumerate(sentences):
-            # 1. Zero-shot Classification (risk & confidence)
             class_res = classifier.classify(sentence)
             risk = class_res["risk"]
             confidence = class_res["confidence"]
 
-            # 2. Anomaly Scoring against known corpus
             anomaly_score = anomaly_detector.compute_anomaly_score(sentence)
 
-            # 3. Rule-based explanation and categorization
             exp_res = explainer.generate_explanation(sentence, risk)
 
             if risk in risk_summary:
@@ -124,10 +244,9 @@ def process_analysis_job(analysis_id: str, text: str):
                 "confidence": confidence,
                 "anomaly_score": anomaly_score,
                 "category": exp_res["category"],
-                "explanation": exp_res["explanation"]
+                "explanation": json.dumps(exp_res["explanation"]),
             })
 
-        # Save to DB
         conn = sqlite3.connect(DB_PATH)
         c = conn.cursor()
         
@@ -142,7 +261,18 @@ def process_analysis_job(analysis_id: str, text: str):
             SET status = 'complete', clause_count = ?, risk_summary = ?, completed_at = CURRENT_TIMESTAMP
             WHERE id = ?
         """, (len(sentences), json.dumps(risk_summary), analysis_id))
-        
+
+        if user_id:
+            analysis_result = {
+                "analysis_id": analysis_id,
+                "clause_count": len(sentences),
+                "risk_summary": risk_summary,
+            }
+            c.execute(
+                "INSERT INTO history (id, user_id, url, analysis_result) VALUES (?, ?, ?, ?)",
+                (str(uuid.uuid4()), user_id, url, json.dumps(analysis_result)),
+            )
+
         conn.commit()
         conn.close()
 
@@ -178,8 +308,81 @@ def _validate_text_length(text: str) -> None:
         raise HTTPException(status_code=400, detail="Text exceeds maximum length")
 
 
+@app.post("/api/register")
+async def register(request: RegisterRequest):
+    if len(request.username) < 3:
+        raise HTTPException(status_code=400, detail="Username must be at least 3 characters")
+    if len(request.password) < 6:
+        raise HTTPException(status_code=400, detail="Password must be at least 6 characters")
+
+    user_id = str(uuid.uuid4())
+    pw_hash = hash_password(request.password)
+
+    conn = sqlite3.connect(DB_PATH)
+    try:
+        conn.execute(
+            "INSERT INTO users (id, username, password_hash) VALUES (?, ?, ?)",
+            (user_id, request.username, pw_hash),
+        )
+        conn.commit()
+    except sqlite3.IntegrityError:
+        conn.close()
+        raise HTTPException(status_code=409, detail="Username already taken")
+    conn.close()
+
+    token = create_access_token(user_id)
+    return {"token": token, "user_id": user_id, "username": request.username}
+
+
+@app.post("/api/login")
+async def login(request: LoginRequest):
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    row = conn.execute(
+        "SELECT id, username, password_hash FROM users WHERE username = ?",
+        (request.username,),
+    ).fetchone()
+    conn.close()
+
+    if not row or not verify_password(request.password, row["password_hash"]):
+        raise HTTPException(status_code=401, detail="Invalid username or password")
+
+    token = create_access_token(row["id"])
+    return {"token": token, "user_id": row["id"], "username": row["username"]}
+
+
+@app.get("/api/history")
+async def get_history(user_id: str = Depends(get_required_user_id)):
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    rows = conn.execute(
+        "SELECT id, url, analysis_result, created_at FROM history "
+        "WHERE user_id = ? ORDER BY created_at DESC",
+        (user_id,),
+    ).fetchall()
+    conn.close()
+
+    return {
+        "history": [
+            {
+                "id": row["id"],
+                "url": row["url"],
+                "analysis_result": json.loads(row["analysis_result"])
+                if row["analysis_result"]
+                else None,
+                "created_at": row["created_at"],
+            }
+            for row in rows
+        ]
+    }
+
+
 @app.post("/api/analyze")
-async def create_analysis(request: AnalyzeRequest, background_tasks: BackgroundTasks):
+async def create_analysis(
+    request: AnalyzeRequest,
+    background_tasks: BackgroundTasks,
+    user_id: Optional[str] = Depends(get_optional_user_id),
+):
     from scraper import scrape_url
 
     text = request.text
@@ -215,7 +418,7 @@ async def create_analysis(request: AnalyzeRequest, background_tasks: BackgroundT
     conn.commit()
     conn.close()
 
-    background_tasks.add_task(process_analysis_job, analysis_id, text)
+    background_tasks.add_task(process_analysis_job, analysis_id, text, user_id, url)
 
     return {"id": analysis_id, "status": "processing"}
 
@@ -233,12 +436,27 @@ async def get_analysis(analysis_id: str):
     return {
         "id": row["id"],
         "url": row["url"],
+        "raw_text": row["raw_text"],
         "status": row["status"],
         "clause_count": row["clause_count"],
         "risk_summary": json.loads(row["risk_summary"]),
         "created_at": row["created_at"],
         "completed_at": row["completed_at"],
     }
+
+def _parse_clause_row(row) -> dict:
+    d = dict(row)
+    raw = d.get("explanation", "")
+    try:
+        parsed = json.loads(raw)
+        if isinstance(parsed, dict) and "summary" in parsed:
+            d["explanation"] = parsed
+        else:
+            d["explanation"] = {"summary": str(parsed) if parsed else raw, "unusual": "", "risks": ""}
+    except (json.JSONDecodeError, TypeError):
+        d["explanation"] = {"summary": raw, "unusual": "", "risks": ""}
+    return d
+
 
 @app.get("/api/analyses/{analysis_id}/clauses")
 async def get_clauses(analysis_id: str):
@@ -260,5 +478,5 @@ async def get_clauses(analysis_id: str):
     rows = c.execute("SELECT * FROM clauses WHERE analysis_id = ? ORDER BY position ASC", (analysis_id,)).fetchall()
     conn.close()
 
-    clauses = [dict(row) for row in rows]
+    clauses = [_parse_clause_row(row) for row in rows]
     return {"clauses": clauses}
