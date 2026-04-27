@@ -67,6 +67,9 @@ def init_db():
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY(user_id) REFERENCES users(id)
       );
+
+      CREATE INDEX IF NOT EXISTS idx_analyses_url_status ON analyses(url, status);
+      CREATE INDEX IF NOT EXISTS idx_clauses_analysis_id ON clauses(analysis_id);
     """)
     conn.commit()
     conn.close()
@@ -164,6 +167,8 @@ def get_required_user_id(
 MIN_TEXT_LENGTH = 50
 MAX_TEXT_LENGTH = 100_000
 
+ANOMALY_THRESHOLD = 0.7
+
 
 class RegisterRequest(BaseModel):
     username: str
@@ -218,7 +223,7 @@ def process_analysis_job(
         anomaly_detector = get_anomaly_detector()
         explainer = get_explainer()
 
-        risk_summary = {"safe": 0, "watch": 0, "danger": 0}
+        risk_summary = {"safe": 0, "watch": 0, "danger": 0, "unusual": 0}
         clauses_data = []
 
         for i, sentence in enumerate(sentences):
@@ -230,10 +235,13 @@ def process_analysis_job(
 
             exp_res = explainer.generate_explanation(sentence, risk)
 
-            if risk in risk_summary:
+            if risk in ("safe", "watch", "danger"):
                 risk_summary[risk] += 1
             else:
                 risk_summary["watch"] += 1
+
+            if anomaly_score >= ANOMALY_THRESHOLD:
+                risk_summary["unusual"] += 1
 
             clauses_data.append({
                 "id": str(uuid.uuid4()),
@@ -459,23 +467,34 @@ def _parse_clause_row(row) -> dict:
 
 
 @app.get("/api/analyses/{analysis_id}/clauses")
-async def get_clauses(analysis_id: str):
+async def get_clauses(analysis_id: str, sort: str = "position"):
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
-    
+
     # Check if analysis is complete
     status = c.execute("SELECT status FROM analyses WHERE id = ?", (analysis_id,)).fetchone()
     if not status:
         conn.close()
         raise HTTPException(status_code=404, detail="Analysis not found")
-        
+
     if status["status"] != "complete":
         conn.close()
         # If it's processing, just return empty list as a signal to keep waiting
         return {"clauses": []}
-    
-    rows = c.execute("SELECT * FROM clauses WHERE analysis_id = ? ORDER BY position ASC", (analysis_id,)).fetchall()
+
+    order_clauses = {
+        "anomaly": "anomaly_score DESC, position ASC",
+        "confidence": "confidence DESC, position ASC",
+        "risk": "CASE risk WHEN 'danger' THEN 0 WHEN 'watch' THEN 1 WHEN 'safe' THEN 2 ELSE 3 END ASC, position ASC",
+        "position": "position ASC",
+    }
+    order_by = order_clauses.get(sort, order_clauses["position"])
+
+    rows = c.execute(
+        f"SELECT * FROM clauses WHERE analysis_id = ? ORDER BY {order_by}",
+        (analysis_id,),
+    ).fetchall()
     conn.close()
 
     clauses = [_parse_clause_row(row) for row in rows]
